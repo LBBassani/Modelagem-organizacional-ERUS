@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archimate:model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:archimate="http://www.archimatetool.com/archimate" name="ERUS" id="3ce84aeb-a7cd-4b3e-b8aa-0e81c67f1354" version="4.6.0">
+  <folder name="Strategy" id="d5010ef4-089b-4606-83f6-22a14d7c60eb" type="strategy"/>
+  <folder name="Business" id="ca7b55d8-aa90-471f-bc81-57b5b7c7b545" type="business"/>
+  <folder name="Application" id="846dc367-0d45-490d-9f1f-77251beab321" type="application"/>
+  <folder name="Technology &amp; Physical" id="ce401a3e-e8a8-4478-8944-5b22ecfce47d" type="technology"/>
+  <folder name="Motivation" id="5583c926-94e2-44b6-ad20-d5601c6cda49" type="motivation"/>
+  <folder name="Implementation &amp; Migration" id="716c9455-64dd-466c-af91-68ba9260aac7" type="implementation_migration"/>
+  <folder name="Other" id="c6cbf455-4a79-4ec9-9c32-83c7fc9438a3" type="other"/>
+  <folder name="Relations" id="4f14bc90-428c-48e5-b589-de80fe55af37" type="relations"/>
+  <folder name="Views" id="79e1c330-1db5-490f-a624-fedc06ea99ed" type="diagrams">
+    <folder name="Organograma" id="8e26704b-65b0-492e-850c-61cc25da89e9">
+      <element xsi:type="archimate:ArchimateDiagramModel" name="organização geral" id="d642a205-6b19-4f00-a331-c7f789db3271"/>
+    </folder>
+    <element xsi:type="archimate:ArchimateDiagramModel" name="Default View" id="8955a989-2e97-4397-a27f-1414241851b3"/>
+  </folder>
+</archimate:model>
