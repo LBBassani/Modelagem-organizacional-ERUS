@@ -92,7 +92,7 @@ Possui foco em tecnologias de hardware e visão, procurando manter um projeto di
     <element xsi:type="archimate:BusinessService" name="Acompanhamento de Planejamento" id="4a542157-d43b-499b-871f-4782ebe5447d">
       <documentation>Auxiliar no planejamento das atividades, incluindo: prestar auxilio na criação de cronograma; organização e gerência de pessoas no projeto; definição de prazos e objetivos intermediários para o cumprimento da atividade.</documentation>
     </element>
-    <element xsi:type="archimate:BusinessService" name="Atentar-se a oportunidades" id="eea945c5-8da2-4e2c-9e96-bb898e38730d">
+    <element xsi:type="archimate:BusinessService" name="Atentar-se a Oportunidades" id="eea945c5-8da2-4e2c-9e96-bb898e38730d">
       <documentation>O coordenador deve mostrar-se sempre atento as oportunidades que surgem que podem ser benéfica a equipe, como parceirias e editais de compra, paritipações em eventos ou competições e bolsas.</documentation>
     </element>
     <element xsi:type="archimate:BusinessService" name="Atentar-se a Editais" id="69b902f6-7505-4041-9487-89ad18325fb7">
@@ -138,6 +138,33 @@ Possui foco em tecnologias de hardware e visão, procurando manter um projeto di
     </element>
     <element xsi:type="archimate:BusinessService" name="Desenvolver Atividade de Projeto" id="111079ea-14d1-47b3-975c-e1045e89043d">
       <documentation>Dedicar-se ao desenvolvimento de atividades relacionadas ao seu projeto, designadas a ele pela liderança do projeto em reunião. O membro deve ser capaz de discenir os objetivos da atividade, sua capacidade em realizá-la no tempo definido, pedindo auxílio de outros membros quando algum problema é encontrado ou reportando tal problema para a liderança do projeto ou para a equipe em reunião. A capacidade de trabalhar em equipe é extremamente bem vista, assim como a independencia de ações caso a tarefa seja atribuida solo.</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessService" name="Organizar eventos" id="a4be371d-8ab2-44d4-89d2-eee19842a05d">
+      <documentation>A principal responsabilidade da equipe de comissão de eventos é organizar eventos, compreendendo todos os sub-serviços que devem ser prestados para que este seja prestado da forma correta. A organização de eventos é de extrema importância para a equipe, pois é uma das formas mais eficazes de realizar os objetivos de extensão do laboratório.</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessService" name="Redigir e lançar edital" id="328c4f37-65a1-478a-bab3-effa5feecaea">
+      <documentation>Redigir e lançar edital para o evento é o primeiro passo para que o evento ocorra. O edital é o documento que define com precisão os objetivos, cronograma e espcificidades do evento. Nele temos informações sobre a natureza do evento, o que é necessário ou possível realizar durante o evento, assim como quando e onde ele irá ocorrer.</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessService" name="Manejar e promover as inscrições" id="0964ffc0-f00f-4c0a-8dac-e70137067b97">
+      <documentation>Manejar e promover as incrições é um serviço que diz respeito tanto a realizar o processo de inscrições, escolhendo plataforma e formato, quanto encorajar o público a fazê-las, retirar dúvidas e auxiliar o processo de inscrição de cada participante.</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessService" name="Organizar e cumprir cronograma" id="8302732b-bacf-4690-b5ef-cb1a1b78b61c">
+      <documentation>O cronograma de realização do evento, tanto de organização quanto de acontecimentos do evento, devem ser planejados e cumpridos de acordo. Qualquer modificação deve ser discutida, documentada e prontamente alertada a todos que ela possa envolver.</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessService" name="Oferecer suporte aos participantes" id="3341eb1b-08de-4ad9-b7f9-f2f12501993c">
+      <documentation>O suporte aos participantes de um evento é extremamente importante. É necessário ter prontidão para responder quaisquer dúvidas quanto ao envento de forma educada e compreensível. Quaisquer decisões importantes a serem levadas quanto aos participantes devem ser debatidas e concordadas por toda equipe e nunca devem ser tomadas decisões por impulso.</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessService" name="Apoiar eventos" id="81bde2ee-b36e-4ab5-8cf8-da05e46509f1">
+      <documentation>O apoio a eventos de outras organizações é extremamente importante para promover a equipe e a robótica no estado. Apoiar eventos de outras organizações significa estar engajado na organização e acontecimento deles, promovendo e participando deles, além de oferecendo serviços que a equipe saiba realizar que possam ser proveitosos ao evento. As parcerias e experiências que obtemos em apoio a eventos é de extrema importância para o crescimento da equipe, crescimento pessoal dos envolvidos e da robótica como um todo.</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessService" name="Oferecer e recrutar voluntários" id="ecb80962-f09e-49ab-bd95-a1fa48915776">
+      <documentation>Oferecer e recrutar voluntários significa tanto disponibilizar membros da equipe para ajudar no evento quanto realizar esforços para recrutar outras pessoas para os trabalhos voluntários, como outros alunos e professores da universidade ou colegas.</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessService" name="Promover o evento" id="4c1f3df1-06b1-43da-a0e1-b127e0126731">
+      <documentation>A promoção de eventos de organizações parceiras fortalece a relação entre a equipe e a organização, além de crescer a imagem de ambas.</documentation>
+    </element>
+    <element xsi:type="archimate:BusinessService" name="Oferecer ajuda na organização" id="77f5421c-ae34-4103-a5da-5d95d73effc2">
+      <documentation>Oferecer ajuda com etapas ou até com todo o processo de organização, estando presente e de prontidão para as necessidades da equipe de organização do evento.</documentation>
     </element>
   </folder>
   <folder name="Application" id="846dc367-0d45-490d-9f1f-77251beab321" type="application"/>
@@ -205,212 +232,317 @@ Possui foco em tecnologias de hardware e visão, procurando manter um projeto di
     <element xsi:type="archimate:ServingRelationship" id="48f65c7c-95ad-4e26-9500-5e0c156935dd" source="712c555f-7dd4-4dec-b51b-1924fb5c92f8" target="06128c48-c9ed-4a4c-a352-507dd18a46c0"/>
     <element xsi:type="archimate:ServingRelationship" id="97f4547e-0a83-4965-983c-bbcfbc341f61" source="cc430cf0-861f-4003-837d-07a74ec287aa" target="06128c48-c9ed-4a4c-a352-507dd18a46c0"/>
     <element xsi:type="archimate:ServingRelationship" id="21208494-9d42-43de-b967-766770e74659" source="111079ea-14d1-47b3-975c-e1045e89043d" target="06128c48-c9ed-4a4c-a352-507dd18a46c0"/>
+    <element xsi:type="archimate:ServingRelationship" id="b9736883-cbbb-4f50-a2c6-4ffa25f6a86e" source="a4be371d-8ab2-44d4-89d2-eee19842a05d" target="8b47986b-cc0b-41a7-b290-53608a128c86"/>
+    <element xsi:type="archimate:CompositionRelationship" id="b9bf353c-ae75-4672-9785-d23cd6800de9" source="a4be371d-8ab2-44d4-89d2-eee19842a05d" target="328c4f37-65a1-478a-bab3-effa5feecaea"/>
+    <element xsi:type="archimate:CompositionRelationship" id="7c7fbc30-d9d9-41ec-90e2-65b290893f86" source="a4be371d-8ab2-44d4-89d2-eee19842a05d" target="0964ffc0-f00f-4c0a-8dac-e70137067b97"/>
+    <element xsi:type="archimate:CompositionRelationship" id="9d28f0d0-85c2-4e67-aa58-b7d6705e4ff0" source="a4be371d-8ab2-44d4-89d2-eee19842a05d" target="8302732b-bacf-4690-b5ef-cb1a1b78b61c"/>
+    <element xsi:type="archimate:CompositionRelationship" id="27091164-4026-442a-bd5a-4b2e0cab57fb" source="a4be371d-8ab2-44d4-89d2-eee19842a05d" target="3341eb1b-08de-4ad9-b7f9-f2f12501993c"/>
+    <element xsi:type="archimate:ServingRelationship" id="0cfb20a2-e211-4a63-b268-7a8a988f5aff" source="81bde2ee-b36e-4ab5-8cf8-da05e46509f1" target="8b47986b-cc0b-41a7-b290-53608a128c86"/>
+    <element xsi:type="archimate:SpecializationRelationship" id="441662ec-c153-496f-b2d7-96aacd187e32" source="ecb80962-f09e-49ab-bd95-a1fa48915776" target="81bde2ee-b36e-4ab5-8cf8-da05e46509f1"/>
+    <element xsi:type="archimate:SpecializationRelationship" id="dea35adf-9810-43a3-838d-bebae85e351c" source="4c1f3df1-06b1-43da-a0e1-b127e0126731" target="81bde2ee-b36e-4ab5-8cf8-da05e46509f1"/>
+    <element xsi:type="archimate:SpecializationRelationship" id="3d81e090-02c4-4a85-b2a9-be0eb474891c" source="77f5421c-ae34-4103-a5da-5d95d73effc2" target="81bde2ee-b36e-4ab5-8cf8-da05e46509f1"/>
+    <element xsi:type="archimate:ServingRelationship" id="0137cbff-16e5-4d55-83fc-98964460572c" source="80995fdb-57de-46e3-b700-9c9da9e9be79" target="8b47986b-cc0b-41a7-b290-53608a128c86"/>
   </folder>
   <folder name="Views" id="79e1c330-1db5-490f-a624-fedc06ea99ed" type="diagrams">
     <folder name="Organograma" id="8e26704b-65b0-492e-850c-61cc25da89e9">
       <folder name="Responsabilidades da equipe" id="53019553-2976-44de-9b76-83c5e1c5c292">
         <folder name="Responsabilidades de equipe de projeto de extensão" id="d7f4bdde-0cf4-4421-ba41-e235c0478358">
-          <folder name="Responsabilidades da equipe de marketing" id="d775ddd5-43ad-48d2-8807-5ee78ecd0037"/>
-          <folder name="Responsabilidades da equipe de ensino" id="c46b62fb-3661-413f-9fac-410e0b3da883"/>
-          <folder name="Responsabilidades de equipe competitiva" id="d0e8bde9-0c6f-4966-aae4-432db466b67a"/>
-          <folder name="Responsabilidades da equipe da comissão de eventos" id="8e6bd560-e060-4dc7-b169-6988326e624a"/>
-          <folder name="Responsabilidades da equipe de apresentações" id="6554d9af-b710-49dd-b633-7b0713f0ff42"/>
-          <element xsi:type="archimate:ArchimateDiagramModel" name="Responsabilidades de membro de projeto de extensão" id="9662dedb-a7c0-4fd9-aef4-b93e37d2f322">
-            <child xsi:type="archimate:DiagramObject" id="6133c66e-86a0-4303-91c3-20b3fbede943" targetConnections="ae8cc127-d041-4aa8-9eac-f71c407464b9 66083c8f-1116-46c9-a710-c0c6ac3e3f9b 1da5132d-31e6-405c-8825-32172d333ff3" archimateElement="06128c48-c9ed-4a4c-a352-507dd18a46c0">
-              <bounds x="324" y="48" width="120" height="55"/>
+          <folder name="Responsabilidades de membros de equipe de projetos de extensão" id="8e6bd560-e060-4dc7-b169-6988326e624a">
+            <documentation>Pasta com diagramas de responsabilidades relacionadas a membros de equipes de projeto de extensão.</documentation>
+            <element xsi:type="archimate:ArchimateDiagramModel" name="Responsabilidades de líder de projeto de extensão" id="74b499f1-56b2-483d-9e3b-e2f601b3183c">
+              <child xsi:type="archimate:DiagramObject" id="77d7464e-13b7-4c55-91da-a3b696f287a6" archimateElement="fc11f633-841d-4df2-a65e-8db7372b1c39">
+                <bounds x="372" y="60" width="120" height="55"/>
+              </child>
+              <documentation>Este diagrama apresenta as principais atividades e responsabilidades do líder de projeto de extensão. Neste diagrama, são listadas as principais dificuldades e necessidades, dos membros de projeto de extensão, em questão de planejamento, gestão e organização, e além das suas ideias de responsabilidades e postura do líder do projeto.</documentation>
+            </element>
+            <element xsi:type="archimate:ArchimateDiagramModel" name="Responsabilidades de membro de projeto de extensão" id="9662dedb-a7c0-4fd9-aef4-b93e37d2f322">
+              <child xsi:type="archimate:DiagramObject" id="6133c66e-86a0-4303-91c3-20b3fbede943" targetConnections="ae8cc127-d041-4aa8-9eac-f71c407464b9 66083c8f-1116-46c9-a710-c0c6ac3e3f9b 1da5132d-31e6-405c-8825-32172d333ff3" archimateElement="06128c48-c9ed-4a4c-a352-507dd18a46c0">
+                <bounds x="324" y="48" width="120" height="55"/>
+              </child>
+              <child xsi:type="archimate:DiagramObject" id="d191b999-cd0f-449a-bc57-1f4aee8273a8" archimateElement="712c555f-7dd4-4dec-b51b-1924fb5c92f8">
+                <bounds x="107" y="120" width="218" height="55"/>
+                <sourceConnection xsi:type="archimate:Connection" id="ae8cc127-d041-4aa8-9eac-f71c407464b9" source="d191b999-cd0f-449a-bc57-1f4aee8273a8" target="6133c66e-86a0-4303-91c3-20b3fbede943" archimateRelationship="48f65c7c-95ad-4e26-9500-5e0c156935dd">
+                  <bendpoint startX="168" startY="9" endY="81"/>
+                </sourceConnection>
+              </child>
+              <child xsi:type="archimate:DiagramObject" id="61a19781-3ff6-4994-93c3-2e16276f2183" archimateElement="cc430cf0-861f-4003-837d-07a74ec287aa">
+                <bounds x="443" y="120" width="218" height="55"/>
+                <sourceConnection xsi:type="archimate:Connection" id="66083c8f-1116-46c9-a710-c0c6ac3e3f9b" source="61a19781-3ff6-4994-93c3-2e16276f2183" target="6133c66e-86a0-4303-91c3-20b3fbede943" archimateRelationship="97f4547e-0a83-4965-983c-bbcfbc341f61">
+                  <bendpoint startX="-168" startY="9" endY="81"/>
+                </sourceConnection>
+              </child>
+              <child xsi:type="archimate:DiagramObject" id="f8177f3e-b436-44ae-b6e4-f0fa791bde98" archimateElement="111079ea-14d1-47b3-975c-e1045e89043d">
+                <bounds x="108" y="201" width="217" height="55"/>
+                <sourceConnection xsi:type="archimate:Connection" id="1da5132d-31e6-405c-8825-32172d333ff3" source="f8177f3e-b436-44ae-b6e4-f0fa791bde98" target="6133c66e-86a0-4303-91c3-20b3fbede943" archimateRelationship="21208494-9d42-43de-b967-766770e74659">
+                  <bendpoint startX="168" startY="12" endY="165"/>
+                </sourceConnection>
+              </child>
+              <documentation>Este diagrama apresenta as principais atividades e responsabilidades de membro de projeto de extensão. Neste diagrama, são listadas as principais necessidades, dos membros de projeto de extensão, em questão de desenvolvimento do projeto, e além das suas ideias de responsabilidades e postura do líder de membros. Com isso, o projeto se desenvolve a partir da colaboração de todos os membros em realizar tais responsabilidades e manter a postura adequada.</documentation>
+            </element>
+            <element xsi:type="archimate:ArchimateDiagramModel" name="Responsabilidades de vice-líder de projeto de Extensão" id="e90a06ce-119e-412d-b1f2-2fb7c03109be">
+              <child xsi:type="archimate:DiagramObject" id="d913fc55-066b-4d16-8471-3bfb606e5e35" archimateElement="0f3174e2-7fa6-4d3b-b5a1-0c82f131e5f6">
+                <bounds x="336" y="60" width="120" height="55"/>
+              </child>
+              <documentation>Este diagrama apresenta as principais atividades e responsabilidades do vice-líder de projeto de extensão. Neste diagrama, são listadas as principais dificuldades e necessidades, dos membros de projeto de extensão, em questão de planejamento, gestão e organização, e além das suas ideias de responsabilidades e postura do vice-líder do projeto.</documentation>
+            </element>
+          </folder>
+          <documentation>Pasta com diagramas de responsabilidades relacionadas a equipes de projeto de extensão.</documentation>
+          <element xsi:type="archimate:ArchimateDiagramModel" name="Responsabilidades da equipe de marketing" id="f559f4dc-6838-4622-a1f1-40195e109460">
+            <child xsi:type="archimate:DiagramObject" id="96f439ab-44ae-42a2-aca3-3246acef2fd2" archimateElement="fc3f8301-d1e2-4749-bbf1-558341f2e04d">
+              <bounds x="336" y="24" width="120" height="55"/>
             </child>
-            <child xsi:type="archimate:DiagramObject" id="d191b999-cd0f-449a-bc57-1f4aee8273a8" archimateElement="712c555f-7dd4-4dec-b51b-1924fb5c92f8">
-              <bounds x="107" y="120" width="218" height="55"/>
-              <sourceConnection xsi:type="archimate:Connection" id="ae8cc127-d041-4aa8-9eac-f71c407464b9" source="d191b999-cd0f-449a-bc57-1f4aee8273a8" target="6133c66e-86a0-4303-91c3-20b3fbede943" archimateRelationship="48f65c7c-95ad-4e26-9500-5e0c156935dd">
-                <bendpoint startX="168" startY="9" endY="81"/>
-              </sourceConnection>
-            </child>
-            <child xsi:type="archimate:DiagramObject" id="61a19781-3ff6-4994-93c3-2e16276f2183" archimateElement="cc430cf0-861f-4003-837d-07a74ec287aa">
-              <bounds x="443" y="120" width="218" height="55"/>
-              <sourceConnection xsi:type="archimate:Connection" id="66083c8f-1116-46c9-a710-c0c6ac3e3f9b" source="61a19781-3ff6-4994-93c3-2e16276f2183" target="6133c66e-86a0-4303-91c3-20b3fbede943" archimateRelationship="97f4547e-0a83-4965-983c-bbcfbc341f61">
-                <bendpoint startX="-168" startY="9" endY="81"/>
-              </sourceConnection>
-            </child>
-            <child xsi:type="archimate:DiagramObject" id="f8177f3e-b436-44ae-b6e4-f0fa791bde98" archimateElement="111079ea-14d1-47b3-975c-e1045e89043d">
-              <bounds x="108" y="201" width="217" height="55"/>
-              <sourceConnection xsi:type="archimate:Connection" id="1da5132d-31e6-405c-8825-32172d333ff3" source="f8177f3e-b436-44ae-b6e4-f0fa791bde98" target="6133c66e-86a0-4303-91c3-20b3fbede943" archimateRelationship="21208494-9d42-43de-b967-766770e74659">
-                <bendpoint startX="168" startY="12" endY="165"/>
-              </sourceConnection>
-            </child>
-            <documentation>Este diagrama apresenta as principais atividades e responsabilidades de membro de projeto de extensão. Neste diagrama, são listadas as principais necessidades, dos membros de projeto de extensão, em questão de desenvolvimento do projeto, e além das suas ideias de responsabilidades e postura do líder de membros. Com isso, o projeto se desenvolve a partir da colaboração de todos os membros em realizar tais responsabilidades e manter a postura adequada.</documentation>
           </element>
-          <element xsi:type="archimate:ArchimateDiagramModel" name="Responsabilidades de vice-líder de projeto de Extensão" id="e90a06ce-119e-412d-b1f2-2fb7c03109be">
-            <child xsi:type="archimate:DiagramObject" id="d913fc55-066b-4d16-8471-3bfb606e5e35" archimateElement="0f3174e2-7fa6-4d3b-b5a1-0c82f131e5f6">
-              <bounds x="336" y="60" width="120" height="55"/>
+          <element xsi:type="archimate:ArchimateDiagramModel" name="Responsabilidades da equipe de apresentações" id="a67420c6-5dde-4100-b00a-68738f6f2fb8">
+            <child xsi:type="archimate:DiagramObject" id="cff6e291-80db-4f68-8c68-692f8946869d" archimateElement="2d99ff03-483e-4c58-a717-6f08952663fb">
+              <bounds x="335" y="42" width="134" height="55"/>
             </child>
-            <documentation>Este diagrama apresenta as principais atividades e responsabilidades do vice-líder de projeto de extensão. Neste diagrama, são listadas as principais dificuldades e necessidades, dos membros de projeto de extensão, em questão de planejamento, gestão e organização, e além das suas ideias de responsabilidades e postura do vice-líder do projeto.</documentation>
           </element>
-          <element xsi:type="archimate:ArchimateDiagramModel" name="Responsabilidades de líder de projeto de extensão" id="74b499f1-56b2-483d-9e3b-e2f601b3183c">
-            <child xsi:type="archimate:DiagramObject" id="77d7464e-13b7-4c55-91da-a3b696f287a6" archimateElement="fc11f633-841d-4df2-a65e-8db7372b1c39">
-              <bounds x="372" y="60" width="120" height="55"/>
+          <element xsi:type="archimate:ArchimateDiagramModel" name="Responsabilidades da equipe de ensino" id="98f8fbe8-f06b-4bf0-b3d4-5754c7410e68">
+            <child xsi:type="archimate:DiagramObject" id="60be6e5d-c83c-4987-910b-a4333709ec95" archimateElement="15d7ce68-1c46-4d1b-bb53-ccb4629a6053">
+              <bounds x="277" y="57" width="120" height="55"/>
             </child>
-            <documentation>Este diagrama apresenta as principais atividades e responsabilidades do líder de projeto de extensão. Neste diagrama, são listadas as principais dificuldades e necessidades, dos membros de projeto de extensão, em questão de planejamento, gestão e organização, e além das suas ideias de responsabilidades e postura do líder do projeto.</documentation>
+          </element>
+          <element xsi:type="archimate:ArchimateDiagramModel" name="Responsabilidades de equipes competitivas" id="d14d08d0-b36e-49df-8ea0-8007a0d571b1">
+            <child xsi:type="archimate:DiagramObject" id="f08b6df2-5379-45ca-9307-26c855811701" archimateElement="d24cdae3-af9d-4fc3-8835-faa0b728f892">
+              <bounds x="321" y="62" width="120" height="55"/>
+            </child>
+          </element>
+          <element xsi:type="archimate:ArchimateDiagramModel" name="Responsabilidades da equipe da comissão de eventos" id="40486e94-2c59-4252-8b7b-225a026de433">
+            <child xsi:type="archimate:DiagramObject" id="6089a24a-43bf-425b-ba66-ce83e7871296" targetConnections="3dc81be6-21f0-4e10-b925-6f506fa10654 0d70ec21-263f-41f1-bdeb-23f06bc7ab70 340346f3-b9cb-4e11-8f00-5b4b99118da9" archimateElement="8b47986b-cc0b-41a7-b290-53608a128c86">
+              <bounds x="312" y="36" width="120" height="55"/>
+            </child>
+            <child xsi:type="archimate:DiagramObject" id="ba524626-2c80-4769-899f-c1f9f7b7defa" archimateElement="a4be371d-8ab2-44d4-89d2-eee19842a05d">
+              <bounds x="96" y="108" width="217" height="55"/>
+              <sourceConnection xsi:type="archimate:Connection" id="3dc81be6-21f0-4e10-b925-6f506fa10654" source="ba524626-2c80-4769-899f-c1f9f7b7defa" target="6089a24a-43bf-425b-ba66-ce83e7871296" archimateRelationship="b9736883-cbbb-4f50-a2c6-4ffa25f6a86e">
+                <bendpoint startX="168" startY="-15" endY="57"/>
+              </sourceConnection>
+              <sourceConnection xsi:type="archimate:Connection" id="5d550bfd-f3d8-4ba0-9b5b-821b764d985b" source="ba524626-2c80-4769-899f-c1f9f7b7defa" target="0ea91abc-039d-48ce-8e87-7483e670a7e2" archimateRelationship="b9bf353c-ae75-4672-9785-d23cd6800de9">
+                <bendpoint startX="12" startY="69" endX="108" endY="-3"/>
+              </sourceConnection>
+              <sourceConnection xsi:type="archimate:Connection" id="8e1fa64e-c806-4ca3-aa6c-8099426a7563" source="ba524626-2c80-4769-899f-c1f9f7b7defa" target="70b42d70-8183-49a8-8b96-9abd271d5bc0" archimateRelationship="7c7fbc30-d9d9-41ec-90e2-65b290893f86">
+                <bendpoint startX="12" startY="117" endX="108" endY="-3"/>
+              </sourceConnection>
+              <sourceConnection xsi:type="archimate:Connection" id="33105eec-25ca-452c-8674-2bc47983a3ba" source="ba524626-2c80-4769-899f-c1f9f7b7defa" target="f666a535-efe3-41d4-bad7-d10074e784ce" archimateRelationship="9d28f0d0-85c2-4e67-aa58-b7d6705e4ff0">
+                <bendpoint startX="12" startY="177" endX="108" endY="-3"/>
+              </sourceConnection>
+              <sourceConnection xsi:type="archimate:Connection" id="7d199632-db49-48cd-a9bf-de0fa96ed8ce" source="ba524626-2c80-4769-899f-c1f9f7b7defa" target="aad3625e-300f-4bc0-b47f-86671f049ed6" archimateRelationship="27091164-4026-442a-bd5a-4b2e0cab57fb">
+                <bendpoint startX="12" startY="237" endX="108" endY="-3"/>
+              </sourceConnection>
+            </child>
+            <child xsi:type="archimate:DiagramObject" id="0ea91abc-039d-48ce-8e87-7483e670a7e2" targetConnections="5d550bfd-f3d8-4ba0-9b5b-821b764d985b" archimateElement="328c4f37-65a1-478a-bab3-effa5feecaea">
+              <bounds x="36" y="168" width="145" height="55"/>
+            </child>
+            <child xsi:type="archimate:DiagramObject" id="70b42d70-8183-49a8-8b96-9abd271d5bc0" targetConnections="8e1fa64e-c806-4ca3-aa6c-8099426a7563" archimateElement="0964ffc0-f00f-4c0a-8dac-e70137067b97">
+              <bounds x="36" y="228" width="145" height="55"/>
+            </child>
+            <child xsi:type="archimate:DiagramObject" id="f666a535-efe3-41d4-bad7-d10074e784ce" targetConnections="33105eec-25ca-452c-8674-2bc47983a3ba" archimateElement="8302732b-bacf-4690-b5ef-cb1a1b78b61c">
+              <bounds x="36" y="288" width="145" height="55"/>
+            </child>
+            <child xsi:type="archimate:DiagramObject" id="aad3625e-300f-4bc0-b47f-86671f049ed6" targetConnections="7d199632-db49-48cd-a9bf-de0fa96ed8ce" archimateElement="3341eb1b-08de-4ad9-b7f9-f2f12501993c">
+              <bounds x="39" y="348" width="139" height="55"/>
+            </child>
+            <child xsi:type="archimate:DiagramObject" id="c49161b9-e31e-4f03-b242-3f65c0132b47" targetConnections="2d0392f8-b3e0-4510-996e-0bce299545c6 13d17224-d828-4bec-9fed-145bb9697ed7 a9713c66-3cf2-446d-8216-1790ea7ddd9f" archimateElement="81bde2ee-b36e-4ab5-8cf8-da05e46509f1">
+              <bounds x="431" y="108" width="217" height="55"/>
+              <sourceConnection xsi:type="archimate:Connection" id="0d70ec21-263f-41f1-bdeb-23f06bc7ab70" source="c49161b9-e31e-4f03-b242-3f65c0132b47" target="6089a24a-43bf-425b-ba66-ce83e7871296" archimateRelationship="0cfb20a2-e211-4a63-b268-7a8a988f5aff">
+                <bendpoint startX="-167" startY="-15" endY="57"/>
+              </sourceConnection>
+            </child>
+            <child xsi:type="archimate:DiagramObject" id="a3087afa-a0e7-4a5f-ba6c-b6fc96f9bdc9" archimateElement="ecb80962-f09e-49ab-bd95-a1fa48915776">
+              <bounds x="552" y="168" width="145" height="55"/>
+              <sourceConnection xsi:type="archimate:Connection" id="2d0392f8-b3e0-4510-996e-0bce299545c6" source="a3087afa-a0e7-4a5f-ba6c-b6fc96f9bdc9" target="c49161b9-e31e-4f03-b242-3f65c0132b47" archimateRelationship="441662ec-c153-496f-b2d7-96aacd187e32">
+                <bendpoint startX="-96" startY="-15" endX="-11" endY="69"/>
+              </sourceConnection>
+            </child>
+            <child xsi:type="archimate:DiagramObject" id="e935f7df-aa85-458d-adf4-110d4cec07a3" archimateElement="4c1f3df1-06b1-43da-a0e1-b127e0126731">
+              <bounds x="552" y="228" width="145" height="55"/>
+              <sourceConnection xsi:type="archimate:Connection" id="13d17224-d828-4bec-9fed-145bb9697ed7" source="e935f7df-aa85-458d-adf4-110d4cec07a3" target="c49161b9-e31e-4f03-b242-3f65c0132b47" archimateRelationship="dea35adf-9810-43a3-838d-bebae85e351c">
+                <bendpoint startX="-96" startY="-3" endX="-11" endY="117"/>
+              </sourceConnection>
+            </child>
+            <child xsi:type="archimate:DiagramObject" id="024e85a9-f3d8-4c9c-89b7-5f42b8063efb" archimateElement="77f5421c-ae34-4103-a5da-5d95d73effc2">
+              <bounds x="552" y="288" width="145" height="55"/>
+              <sourceConnection xsi:type="archimate:Connection" id="a9713c66-3cf2-446d-8216-1790ea7ddd9f" source="024e85a9-f3d8-4c9c-89b7-5f42b8063efb" target="c49161b9-e31e-4f03-b242-3f65c0132b47" archimateRelationship="3d81e090-02c4-4a85-b2a9-be0eb474891c">
+                <bendpoint startX="-96" startY="-3" endX="-11" endY="177"/>
+              </sourceConnection>
+            </child>
+            <child xsi:type="archimate:DiagramObject" id="1c210e12-43de-4696-8915-db5761d8e914" archimateElement="80995fdb-57de-46e3-b700-9c9da9e9be79">
+              <bounds x="431" y="360" width="217" height="55"/>
+              <sourceConnection xsi:type="archimate:Connection" id="340346f3-b9cb-4e11-8f00-5b4b99118da9" source="1c210e12-43de-4696-8915-db5761d8e914" target="6089a24a-43bf-425b-ba66-ce83e7871296" archimateRelationship="0137cbff-16e5-4d55-83fc-98964460572c">
+                <bendpoint startX="-167" startY="-15" endY="309"/>
+              </sourceConnection>
+            </child>
+            <documentation>Este diagrama apresenta as principais atividades e responsabilidades da equipe de comissão de eventos. Eventos de extesão organizados, apoiados e realizados pela equipe possuem um impacto muito positivo na sociedade, promovento oportunidades do público interagir com a equipe e com as áreas de tecnologia que contemplam a robótica. A equipe da comissão de eventos deve sempre estar atenta a eventos na área de robótica para entrar com apoio e mão-de-obra organizadora e realizadora em todos os eventos que puder, além de promover os próprios eventos da equipe, como o TRUFES - Torneio de Robótica da UFES.</documentation>
           </element>
         </folder>
         <folder name="Responsabilidades da equipe administrativa" id="8225da6c-2ad9-4a13-a8d0-d7c117052cbc">
-          <element xsi:type="archimate:ArchimateDiagramModel" name="Responsabilidades do coordenador" id="8645d76c-ab2e-4b3a-9028-a1c2cc51679c">
-            <child xsi:type="archimate:DiagramObject" id="cff11509-7822-4bb9-8601-84d28bb5e565" targetConnections="306d0c6a-b428-4220-8f08-028c44f981a6 908be1f6-7a82-4d8a-8c1f-df0e37cc07ff d0360562-140e-4602-8488-8c438ddfe547 e630ccd9-3428-4d45-be7d-72dc397e0b0d 33babeb7-fd48-43b3-8610-fc15c2ca9da2" archimateElement="56473f70-5fd5-4472-8447-65e5d5cac4da">
-              <bounds x="325" y="48" width="120" height="55"/>
+          <folder name="Responsabilidades de membros da equipe administrativa" id="81a59bcd-1802-4bf1-93d9-73f9c048dcd0">
+            <element xsi:type="archimate:ArchimateDiagramModel" name="Responsabilidades de membro de adminstração" id="93a55796-43a9-4f75-bfce-eb5b91175728">
+              <child xsi:type="archimate:DiagramObject" id="15183547-d89b-4677-9036-59569e739791" targetConnections="29225474-f9c5-4aaf-acd3-4ce83a4e4e09 5ffa9bc9-83da-44a5-9278-45e28773983f 159a0502-63aa-45ec-848c-a51bda53115c 988ca433-0ac2-43b0-bbd7-e37e209a17f3" archimateElement="5b4a6e44-7845-4ac9-a073-75490ffaaa90">
+                <bounds x="312" y="72" width="138" height="55"/>
+              </child>
+              <child xsi:type="archimate:DiagramObject" id="f147df3f-a30d-44ec-96e6-c3518b2cf95a" archimateElement="b0efcf40-1014-46b2-a853-012dcad10471">
+                <bounds x="588" y="204" width="164" height="55"/>
+                <sourceConnection xsi:type="archimate:Connection" id="9ad2a328-75af-4302-b8e8-5918ba456aaf" source="f147df3f-a30d-44ec-96e6-c3518b2cf95a" target="754ff84a-50e9-4d85-9898-8188eae261ec" archimateRelationship="e5a8ce7c-7c0f-4df8-8b6e-f649a607740c">
+                  <bendpoint startX="-118" startY="9" endX="-3" endY="69"/>
+                </sourceConnection>
+              </child>
+              <child xsi:type="archimate:DiagramObject" id="b3e035a6-6391-422b-9899-2bfbc31d9c4d" archimateElement="cc430cf0-861f-4003-837d-07a74ec287aa">
+                <bounds x="5" y="204" width="164" height="55"/>
+                <sourceConnection xsi:type="archimate:Connection" id="aa4d9fdd-ce7d-4cf8-8717-37c01e999480" source="b3e035a6-6391-422b-9899-2bfbc31d9c4d" target="db78f462-d86f-4fbf-af81-48d8cd285e5c" archimateRelationship="63a3e0c8-61d8-4a77-aff7-71f7252f5461">
+                  <bendpoint startX="122" startY="9" endX="2" endY="69"/>
+                </sourceConnection>
+              </child>
+              <child xsi:type="archimate:DiagramObject" id="754ff84a-50e9-4d85-9898-8188eae261ec" targetConnections="9ad2a328-75af-4302-b8e8-5918ba456aaf" archimateElement="8d556e51-b501-41d6-b1d6-312d1fec3732">
+                <bounds x="449" y="144" width="212" height="55"/>
+                <sourceConnection xsi:type="archimate:Connection" id="29225474-f9c5-4aaf-acd3-4ce83a4e4e09" source="754ff84a-50e9-4d85-9898-8188eae261ec" target="15183547-d89b-4677-9036-59569e739791" archimateRelationship="e65ea121-f92c-4e4b-9d34-0db3c6799595">
+                  <bendpoint startX="-171" startY="9" endX="3" endY="81"/>
+                </sourceConnection>
+              </child>
+              <child xsi:type="archimate:DiagramObject" id="db78f462-d86f-4fbf-af81-48d8cd285e5c" targetConnections="aa4d9fdd-ce7d-4cf8-8717-37c01e999480" archimateElement="6470058a-6f1f-42f8-b9bb-1daa91523993">
+                <bounds x="101" y="144" width="212" height="55"/>
+                <sourceConnection xsi:type="archimate:Connection" id="5ffa9bc9-83da-44a5-9278-45e28773983f" source="db78f462-d86f-4fbf-af81-48d8cd285e5c" target="15183547-d89b-4677-9036-59569e739791" archimateRelationship="0af14c9d-a7ba-49d7-9b98-9ac6737433ae">
+                  <bendpoint startX="177" startY="9" endX="3" endY="81"/>
+                </sourceConnection>
+              </child>
+              <child xsi:type="archimate:DiagramObject" id="fe4eb0a6-8be5-489b-b524-6968cc23535c" targetConnections="e17e76bc-2ddf-4211-8e91-63fe94fe74a7" archimateElement="9a648016-532c-472c-92ee-b289971ad186">
+                <bounds x="458" y="276" width="203" height="55"/>
+                <sourceConnection xsi:type="archimate:Connection" id="988ca433-0ac2-43b0-bbd7-e37e209a17f3" source="fe4eb0a6-8be5-489b-b524-6968cc23535c" target="15183547-d89b-4677-9036-59569e739791" archimateRelationship="5b9006cd-ae4d-4f49-b69f-3ef9e58ac0e7">
+                  <bendpoint startX="-175" startY="9" endX="3" endY="213"/>
+                </sourceConnection>
+              </child>
+              <child xsi:type="archimate:DiagramObject" id="f36e8aae-4639-4766-b303-684d9e499ee3" targetConnections="71d7495d-75ac-47ad-a5ca-210aab685e93" archimateElement="d5d6bf7e-a250-4293-84eb-fbe16a4033ae">
+                <bounds x="101" y="276" width="212" height="55"/>
+                <sourceConnection xsi:type="archimate:Connection" id="159a0502-63aa-45ec-848c-a51bda53115c" source="f36e8aae-4639-4766-b303-684d9e499ee3" target="15183547-d89b-4677-9036-59569e739791" archimateRelationship="eaf1ad14-dff2-433f-bfdd-740ef2f98686">
+                  <bendpoint startX="177" startY="9" endX="3" endY="213"/>
+                </sourceConnection>
+              </child>
+              <child xsi:type="archimate:DiagramObject" id="088db01d-bab0-4035-83eb-0519ee0cbc02" archimateElement="605f3af2-ee58-4694-8e79-40a96cecb978">
+                <bounds x="5" y="336" width="164" height="55"/>
+                <sourceConnection xsi:type="archimate:Connection" id="71d7495d-75ac-47ad-a5ca-210aab685e93" source="088db01d-bab0-4035-83eb-0519ee0cbc02" target="f36e8aae-4639-4766-b303-684d9e499ee3" archimateRelationship="49bf55da-cc88-4056-8db4-135c9d76d86e">
+                  <bendpoint startX="129" startY="9" endX="9" endY="81"/>
+                </sourceConnection>
+              </child>
+              <child xsi:type="archimate:DiagramObject" id="66545473-e33d-4a53-a50d-fd530b38753b" archimateElement="712c555f-7dd4-4dec-b51b-1924fb5c92f8">
+                <bounds x="588" y="336" width="164" height="55"/>
+                <sourceConnection xsi:type="archimate:Connection" id="e17e76bc-2ddf-4211-8e91-63fe94fe74a7" source="66545473-e33d-4a53-a50d-fd530b38753b" target="fe4eb0a6-8be5-489b-b524-6968cc23535c" archimateRelationship="a67e2b91-42ff-438c-bc1d-7534c838c90f">
+                  <bendpoint startX="-118" startY="9" endX="-7" endY="69"/>
+                </sourceConnection>
+              </child>
+              <documentation>Este diagrama apresenta as principais atividades e responsabilidades de membro de administração. Neste diagrama, são listadas as principais dificuldades e necessidades, dos membros da equipe, em questão de planejamento, gestão e organização, e além das suas ideias de responsabilidades e postura de membro de administração.</documentation>
+            </element>
+            <element xsi:type="archimate:ArchimateDiagramModel" name="Responsabilidades do coordenador" id="8645d76c-ab2e-4b3a-9028-a1c2cc51679c">
+              <child xsi:type="archimate:DiagramObject" id="cff11509-7822-4bb9-8601-84d28bb5e565" targetConnections="306d0c6a-b428-4220-8f08-028c44f981a6 908be1f6-7a82-4d8a-8c1f-df0e37cc07ff d0360562-140e-4602-8488-8c438ddfe547 e630ccd9-3428-4d45-be7d-72dc397e0b0d 33babeb7-fd48-43b3-8610-fc15c2ca9da2" archimateElement="56473f70-5fd5-4472-8447-65e5d5cac4da">
+                <bounds x="325" y="48" width="120" height="55"/>
+              </child>
+              <child xsi:type="archimate:DiagramObject" id="e970fb3e-0087-4610-8bf4-935f071eba74" targetConnections="c835a0d4-bcf9-4787-b8fd-465eb85233b5 2552a9a8-b6e7-4a9b-99c1-707c4690fa89" archimateElement="d6a706e2-bd6c-4541-964a-eb9b35c9a2c4">
+                <bounds x="444" y="120" width="197" height="55"/>
+                <sourceConnection xsi:type="archimate:Connection" id="306d0c6a-b428-4220-8f08-028c44f981a6" source="e970fb3e-0087-4610-8bf4-935f071eba74" target="cff11509-7822-4bb9-8601-84d28bb5e565" archimateRelationship="d7af0309-a22c-4b61-b7f0-6c071ee6f15e">
+                  <bendpoint startX="-158" startY="9" endX="-1" endY="81"/>
+                </sourceConnection>
+              </child>
+              <child xsi:type="archimate:DiagramObject" id="a47e17ef-0c14-4e41-8954-52d28bfc7577" targetConnections="fb7dad46-7698-4e37-a1bc-df8eca43ca43 3b9be3b1-6321-44f1-8451-ffc8d5411fcd 355fca6a-f58a-4f49-b846-999d9f2a8958 5f4c2404-bba0-40ff-a4af-0f59d39afb46" archimateElement="8d556e51-b501-41d6-b1d6-312d1fec3732">
+                <bounds x="444" y="324" width="197" height="55"/>
+                <sourceConnection xsi:type="archimate:Connection" id="908be1f6-7a82-4d8a-8c1f-df0e37cc07ff" source="a47e17ef-0c14-4e41-8954-52d28bfc7577" target="cff11509-7822-4bb9-8601-84d28bb5e565" archimateRelationship="48d86c52-e205-4f5a-8515-a35a0b370539">
+                  <bendpoint startX="-158" startY="9" endX="-1" endY="285"/>
+                </sourceConnection>
+              </child>
+              <child xsi:type="archimate:DiagramObject" id="dc87e24c-a34b-4100-9af4-d773f3e8a670" archimateElement="16be25b9-210f-4b79-bef9-6b6f25b52666">
+                <bounds x="481" y="384" width="160" height="55"/>
+                <sourceConnection xsi:type="archimate:Connection" id="fb7dad46-7698-4e37-a1bc-df8eca43ca43" source="dc87e24c-a34b-4100-9af4-d773f3e8a670" target="a47e17ef-0c14-4e41-8954-52d28bfc7577" archimateRelationship="a8866ff8-1ab3-4dd5-ad9c-4af801380214">
+                  <bendpoint startX="-92" startY="9" endX="-73" endY="69"/>
+                </sourceConnection>
+              </child>
+              <child xsi:type="archimate:DiagramObject" id="64a1830a-6b4d-4ccc-9c9a-3cf18dd266f6" archimateElement="0616236c-4a3d-4b66-a821-a81963d553ea">
+                <bounds x="481" y="444" width="160" height="55"/>
+                <sourceConnection xsi:type="archimate:Connection" id="3b9be3b1-6321-44f1-8451-ffc8d5411fcd" source="64a1830a-6b4d-4ccc-9c9a-3cf18dd266f6" target="a47e17ef-0c14-4e41-8954-52d28bfc7577" archimateRelationship="2604e720-ad49-467d-ad6d-ff6b13e11ef8">
+                  <bendpoint startX="-92" startY="9" endX="-73" endY="129"/>
+                </sourceConnection>
+              </child>
+              <child xsi:type="archimate:DiagramObject" id="02671d23-05f9-4811-b0fa-87845f90e7b7" archimateElement="b0efcf40-1014-46b2-a853-012dcad10471">
+                <bounds x="481" y="504" width="160" height="55"/>
+                <sourceConnection xsi:type="archimate:Connection" id="355fca6a-f58a-4f49-b846-999d9f2a8958" source="02671d23-05f9-4811-b0fa-87845f90e7b7" target="a47e17ef-0c14-4e41-8954-52d28bfc7577" archimateRelationship="e5a8ce7c-7c0f-4df8-8b6e-f649a607740c">
+                  <bendpoint startX="-92" startY="9" endX="-73" endY="189"/>
+                </sourceConnection>
+              </child>
+              <child xsi:type="archimate:DiagramObject" id="fad3f5ed-97a4-448f-90c1-f530e081d69f" archimateElement="4a542157-d43b-499b-871f-4782ebe5447d">
+                <bounds x="481" y="564" width="160" height="55"/>
+                <sourceConnection xsi:type="archimate:Connection" id="5f4c2404-bba0-40ff-a4af-0f59d39afb46" source="fad3f5ed-97a4-448f-90c1-f530e081d69f" target="a47e17ef-0c14-4e41-8954-52d28bfc7577" archimateRelationship="6c62d920-4080-4c0d-982d-73c757c57cc7">
+                  <bendpoint startX="-92" startY="9" endX="-73" endY="249"/>
+                </sourceConnection>
+              </child>
+              <child xsi:type="archimate:DiagramObject" id="76e73a91-f1f4-4691-8c33-6c3558985067" targetConnections="7a047c9d-4b6e-4bbe-a4d7-ae86217b95c1 d7dc549a-173f-40bc-9a0c-71a206303615" archimateElement="eea945c5-8da2-4e2c-9e96-bb898e38730d">
+                <bounds x="129" y="444" width="197" height="55"/>
+                <sourceConnection xsi:type="archimate:Connection" id="33babeb7-fd48-43b3-8610-fc15c2ca9da2" source="76e73a91-f1f4-4691-8c33-6c3558985067" target="cff11509-7822-4bb9-8601-84d28bb5e565" archimateRelationship="c70cf152-456a-4054-a450-f590a863d3bb">
+                  <bendpoint startX="157" startY="9" endX="-1" endY="405"/>
+                </sourceConnection>
+              </child>
+              <child xsi:type="archimate:DiagramObject" id="85b50506-b619-41f2-b0cb-92de84d77ad9" archimateElement="69b902f6-7505-4041-9487-89ad18325fb7">
+                <bounds x="129" y="504" width="155" height="55"/>
+                <sourceConnection xsi:type="archimate:Connection" id="7a047c9d-4b6e-4bbe-a4d7-ae86217b95c1" source="85b50506-b619-41f2-b0cb-92de84d77ad9" target="76e73a91-f1f4-4691-8c33-6c3558985067" archimateRelationship="51609a5c-d2d8-4c85-a0de-e663d79e9011">
+                  <bendpoint startX="94" startY="9" endX="73" endY="69"/>
+                </sourceConnection>
+              </child>
+              <child xsi:type="archimate:DiagramObject" id="9fa2c9da-0c32-44f1-b92f-477d668f32d1" archimateElement="80995fdb-57de-46e3-b700-9c9da9e9be79">
+                <bounds x="129" y="564" width="155" height="55"/>
+                <sourceConnection xsi:type="archimate:Connection" id="d7dc549a-173f-40bc-9a0c-71a206303615" source="9fa2c9da-0c32-44f1-b92f-477d668f32d1" target="76e73a91-f1f4-4691-8c33-6c3558985067" archimateRelationship="4840898a-cde6-4d4d-a645-7ef9bf873d18">
+                  <bendpoint startX="94" startY="9" endX="73" endY="129"/>
+                </sourceConnection>
+              </child>
+              <child xsi:type="archimate:DiagramObject" id="f34b549e-bc69-4c65-8b04-3e9d0e3f20d7" targetConnections="668171fc-dfe6-4dfb-a005-bea1e4a47481 f9cad325-7a69-4bc8-8dc4-faf4ef75de1d fd1fe87e-b910-49f2-ac07-875949d7394b" archimateElement="6470058a-6f1f-42f8-b9bb-1daa91523993">
+                <bounds x="129" y="192" width="197" height="55"/>
+                <sourceConnection xsi:type="archimate:Connection" id="d0360562-140e-4602-8488-8c438ddfe547" source="f34b549e-bc69-4c65-8b04-3e9d0e3f20d7" target="cff11509-7822-4bb9-8601-84d28bb5e565" archimateRelationship="7a39af58-dccf-4c72-9011-50e50b1497e2">
+                  <bendpoint startX="157" startY="9" endX="-1" endY="153"/>
+                </sourceConnection>
+              </child>
+              <child xsi:type="archimate:DiagramObject" id="85f5e047-ebf7-4d64-890b-193be69a8a97" archimateElement="d0ed1a3c-a8d1-44f5-860f-75adb9eb382a">
+                <bounds x="129" y="120" width="197" height="55"/>
+                <sourceConnection xsi:type="archimate:Connection" id="e630ccd9-3428-4d45-be7d-72dc397e0b0d" source="85f5e047-ebf7-4d64-890b-193be69a8a97" target="cff11509-7822-4bb9-8601-84d28bb5e565" archimateRelationship="316e467f-8cf5-429a-a0a8-933093246665">
+                  <bendpoint startX="157" startY="9" endX="-1" endY="81"/>
+                </sourceConnection>
+              </child>
+              <child xsi:type="archimate:DiagramObject" id="31fe1f11-0085-4329-92df-8f31c743931f" archimateElement="f2383cf6-a939-4244-9503-8265788fee2d">
+                <bounds x="129" y="252" width="155" height="55"/>
+                <sourceConnection xsi:type="archimate:Connection" id="668171fc-dfe6-4dfb-a005-bea1e4a47481" source="31fe1f11-0085-4329-92df-8f31c743931f" target="f34b549e-bc69-4c65-8b04-3e9d0e3f20d7" archimateRelationship="8d79db58-9bb1-45ee-980f-f6b32ff9bd51">
+                  <bendpoint startX="94" startY="9" endX="73" endY="69"/>
+                </sourceConnection>
+              </child>
+              <child xsi:type="archimate:DiagramObject" id="97581ae6-5fe6-45b2-8a72-e3f4b785f954" archimateElement="cc430cf0-861f-4003-837d-07a74ec287aa">
+                <bounds x="129" y="312" width="155" height="55"/>
+                <sourceConnection xsi:type="archimate:Connection" id="f9cad325-7a69-4bc8-8dc4-faf4ef75de1d" source="97581ae6-5fe6-45b2-8a72-e3f4b785f954" target="f34b549e-bc69-4c65-8b04-3e9d0e3f20d7" archimateRelationship="63a3e0c8-61d8-4a77-aff7-71f7252f5461">
+                  <bendpoint startX="94" startY="9" endX="73" endY="129"/>
+                </sourceConnection>
+              </child>
+              <child xsi:type="archimate:DiagramObject" id="7ad1e2ad-f3ae-4d10-9ed2-fcf2e556e388" archimateElement="1839a87e-c894-4d66-a8fb-71a72aa9219f">
+                <bounds x="129" y="372" width="155" height="55"/>
+                <sourceConnection xsi:type="archimate:Connection" id="fd1fe87e-b910-49f2-ac07-875949d7394b" source="7ad1e2ad-f3ae-4d10-9ed2-fcf2e556e388" target="f34b549e-bc69-4c65-8b04-3e9d0e3f20d7" archimateRelationship="6e76d980-2fb3-44d5-b57d-40fdeab48a74">
+                  <bendpoint startX="94" startY="9" endX="73" endY="189"/>
+                </sourceConnection>
+              </child>
+              <child xsi:type="archimate:DiagramObject" id="0834685f-406e-494e-be13-ba771563485e" archimateElement="5088a766-a14a-4a85-90b5-5b78a24343c8">
+                <bounds x="483" y="180" width="156" height="55"/>
+                <sourceConnection xsi:type="archimate:Connection" id="c835a0d4-bcf9-4787-b8fd-465eb85233b5" source="0834685f-406e-494e-be13-ba771563485e" target="e970fb3e-0087-4610-8bf4-935f071eba74" archimateRelationship="1b1d9793-aca9-4a92-b8af-1bb5c0dfa78f">
+                  <bendpoint startX="-93" startY="9" endX="-74" endY="69"/>
+                </sourceConnection>
+              </child>
+              <child xsi:type="archimate:DiagramObject" id="d9df79e4-6715-4dae-b349-88a7ad28578c" archimateElement="78535caa-7aea-4ec3-8cd7-c9f963a1ded0">
+                <bounds x="483" y="240" width="156" height="55"/>
+                <sourceConnection xsi:type="archimate:Connection" id="2552a9a8-b6e7-4a9b-99c1-707c4690fa89" source="d9df79e4-6715-4dae-b349-88a7ad28578c" target="e970fb3e-0087-4610-8bf4-935f071eba74" archimateRelationship="a3fb021d-8ccc-4a73-bdc7-1f1363ad9d89">
+                  <bendpoint startX="-93" startY="9" endX="-74" endY="129"/>
+                </sourceConnection>
+              </child>
+              <documentation>Este diagrama apresenta as principais atividades e responsabilidades do coordenador da equipe. Neste diagrama, são listadas as principais dificuldades e necessidades, dos alunos, em questão de planejamento, gestão, burocracia e organização, e além das suas ideias de responsabilidades e postura do coordenador.</documentation>
+            </element>
+          </folder>
+          <documentation>Pasta com diagramas de responsabilidades relacionadas a equipe adiministrativa.</documentation>
+          <element xsi:type="archimate:ArchimateDiagramModel" name="Responsabilidades da equipe administrativa" id="a21a7f27-af51-43ca-918a-5979eba33057">
+            <child xsi:type="archimate:DiagramObject" id="3aa3db7a-be64-40b3-9bad-4f4e28fdc9ae" archimateElement="7cae5c1c-3ddd-4c06-8f00-e80ec6312096">
+              <bounds x="336" y="33" width="135" height="55"/>
             </child>
-            <child xsi:type="archimate:DiagramObject" id="e970fb3e-0087-4610-8bf4-935f071eba74" targetConnections="c835a0d4-bcf9-4787-b8fd-465eb85233b5 2552a9a8-b6e7-4a9b-99c1-707c4690fa89" archimateElement="d6a706e2-bd6c-4541-964a-eb9b35c9a2c4">
-              <bounds x="444" y="120" width="197" height="55"/>
-              <sourceConnection xsi:type="archimate:Connection" id="306d0c6a-b428-4220-8f08-028c44f981a6" source="e970fb3e-0087-4610-8bf4-935f071eba74" target="cff11509-7822-4bb9-8601-84d28bb5e565" archimateRelationship="d7af0309-a22c-4b61-b7f0-6c071ee6f15e">
-                <bendpoint startX="-158" startY="9" endX="-1" endY="81"/>
-              </sourceConnection>
-            </child>
-            <child xsi:type="archimate:DiagramObject" id="a47e17ef-0c14-4e41-8954-52d28bfc7577" targetConnections="fb7dad46-7698-4e37-a1bc-df8eca43ca43 3b9be3b1-6321-44f1-8451-ffc8d5411fcd 355fca6a-f58a-4f49-b846-999d9f2a8958 5f4c2404-bba0-40ff-a4af-0f59d39afb46" archimateElement="8d556e51-b501-41d6-b1d6-312d1fec3732">
-              <bounds x="444" y="324" width="197" height="55"/>
-              <sourceConnection xsi:type="archimate:Connection" id="908be1f6-7a82-4d8a-8c1f-df0e37cc07ff" source="a47e17ef-0c14-4e41-8954-52d28bfc7577" target="cff11509-7822-4bb9-8601-84d28bb5e565" archimateRelationship="48d86c52-e205-4f5a-8515-a35a0b370539">
-                <bendpoint startX="-158" startY="9" endX="-1" endY="285"/>
-              </sourceConnection>
-            </child>
-            <child xsi:type="archimate:DiagramObject" id="dc87e24c-a34b-4100-9af4-d773f3e8a670" archimateElement="16be25b9-210f-4b79-bef9-6b6f25b52666">
-              <bounds x="481" y="384" width="160" height="55"/>
-              <sourceConnection xsi:type="archimate:Connection" id="fb7dad46-7698-4e37-a1bc-df8eca43ca43" source="dc87e24c-a34b-4100-9af4-d773f3e8a670" target="a47e17ef-0c14-4e41-8954-52d28bfc7577" archimateRelationship="a8866ff8-1ab3-4dd5-ad9c-4af801380214">
-                <bendpoint startX="-92" startY="9" endX="-73" endY="69"/>
-              </sourceConnection>
-            </child>
-            <child xsi:type="archimate:DiagramObject" id="64a1830a-6b4d-4ccc-9c9a-3cf18dd266f6" archimateElement="0616236c-4a3d-4b66-a821-a81963d553ea">
-              <bounds x="481" y="444" width="160" height="55"/>
-              <sourceConnection xsi:type="archimate:Connection" id="3b9be3b1-6321-44f1-8451-ffc8d5411fcd" source="64a1830a-6b4d-4ccc-9c9a-3cf18dd266f6" target="a47e17ef-0c14-4e41-8954-52d28bfc7577" archimateRelationship="2604e720-ad49-467d-ad6d-ff6b13e11ef8">
-                <bendpoint startX="-92" startY="9" endX="-73" endY="129"/>
-              </sourceConnection>
-            </child>
-            <child xsi:type="archimate:DiagramObject" id="02671d23-05f9-4811-b0fa-87845f90e7b7" archimateElement="b0efcf40-1014-46b2-a853-012dcad10471">
-              <bounds x="481" y="504" width="160" height="55"/>
-              <sourceConnection xsi:type="archimate:Connection" id="355fca6a-f58a-4f49-b846-999d9f2a8958" source="02671d23-05f9-4811-b0fa-87845f90e7b7" target="a47e17ef-0c14-4e41-8954-52d28bfc7577" archimateRelationship="e5a8ce7c-7c0f-4df8-8b6e-f649a607740c">
-                <bendpoint startX="-92" startY="9" endX="-73" endY="189"/>
-              </sourceConnection>
-            </child>
-            <child xsi:type="archimate:DiagramObject" id="fad3f5ed-97a4-448f-90c1-f530e081d69f" archimateElement="4a542157-d43b-499b-871f-4782ebe5447d">
-              <bounds x="481" y="564" width="160" height="55"/>
-              <sourceConnection xsi:type="archimate:Connection" id="5f4c2404-bba0-40ff-a4af-0f59d39afb46" source="fad3f5ed-97a4-448f-90c1-f530e081d69f" target="a47e17ef-0c14-4e41-8954-52d28bfc7577" archimateRelationship="6c62d920-4080-4c0d-982d-73c757c57cc7">
-                <bendpoint startX="-92" startY="9" endX="-73" endY="249"/>
-              </sourceConnection>
-            </child>
-            <child xsi:type="archimate:DiagramObject" id="76e73a91-f1f4-4691-8c33-6c3558985067" targetConnections="7a047c9d-4b6e-4bbe-a4d7-ae86217b95c1 d7dc549a-173f-40bc-9a0c-71a206303615" archimateElement="eea945c5-8da2-4e2c-9e96-bb898e38730d">
-              <bounds x="129" y="444" width="197" height="55"/>
-              <sourceConnection xsi:type="archimate:Connection" id="33babeb7-fd48-43b3-8610-fc15c2ca9da2" source="76e73a91-f1f4-4691-8c33-6c3558985067" target="cff11509-7822-4bb9-8601-84d28bb5e565" archimateRelationship="c70cf152-456a-4054-a450-f590a863d3bb">
-                <bendpoint startX="157" startY="9" endX="-1" endY="405"/>
-              </sourceConnection>
-            </child>
-            <child xsi:type="archimate:DiagramObject" id="85b50506-b619-41f2-b0cb-92de84d77ad9" archimateElement="69b902f6-7505-4041-9487-89ad18325fb7">
-              <bounds x="129" y="504" width="155" height="55"/>
-              <sourceConnection xsi:type="archimate:Connection" id="7a047c9d-4b6e-4bbe-a4d7-ae86217b95c1" source="85b50506-b619-41f2-b0cb-92de84d77ad9" target="76e73a91-f1f4-4691-8c33-6c3558985067" archimateRelationship="51609a5c-d2d8-4c85-a0de-e663d79e9011">
-                <bendpoint startX="94" startY="9" endX="73" endY="69"/>
-              </sourceConnection>
-            </child>
-            <child xsi:type="archimate:DiagramObject" id="9fa2c9da-0c32-44f1-b92f-477d668f32d1" archimateElement="80995fdb-57de-46e3-b700-9c9da9e9be79">
-              <bounds x="129" y="564" width="155" height="55"/>
-              <sourceConnection xsi:type="archimate:Connection" id="d7dc549a-173f-40bc-9a0c-71a206303615" source="9fa2c9da-0c32-44f1-b92f-477d668f32d1" target="76e73a91-f1f4-4691-8c33-6c3558985067" archimateRelationship="4840898a-cde6-4d4d-a645-7ef9bf873d18">
-                <bendpoint startX="94" startY="9" endX="73" endY="129"/>
-              </sourceConnection>
-            </child>
-            <child xsi:type="archimate:DiagramObject" id="f34b549e-bc69-4c65-8b04-3e9d0e3f20d7" targetConnections="668171fc-dfe6-4dfb-a005-bea1e4a47481 f9cad325-7a69-4bc8-8dc4-faf4ef75de1d fd1fe87e-b910-49f2-ac07-875949d7394b" archimateElement="6470058a-6f1f-42f8-b9bb-1daa91523993">
-              <bounds x="129" y="192" width="197" height="55"/>
-              <sourceConnection xsi:type="archimate:Connection" id="d0360562-140e-4602-8488-8c438ddfe547" source="f34b549e-bc69-4c65-8b04-3e9d0e3f20d7" target="cff11509-7822-4bb9-8601-84d28bb5e565" archimateRelationship="7a39af58-dccf-4c72-9011-50e50b1497e2">
-                <bendpoint startX="157" startY="9" endX="-1" endY="153"/>
-              </sourceConnection>
-            </child>
-            <child xsi:type="archimate:DiagramObject" id="85f5e047-ebf7-4d64-890b-193be69a8a97" archimateElement="d0ed1a3c-a8d1-44f5-860f-75adb9eb382a">
-              <bounds x="129" y="120" width="197" height="55"/>
-              <sourceConnection xsi:type="archimate:Connection" id="e630ccd9-3428-4d45-be7d-72dc397e0b0d" source="85f5e047-ebf7-4d64-890b-193be69a8a97" target="cff11509-7822-4bb9-8601-84d28bb5e565" archimateRelationship="316e467f-8cf5-429a-a0a8-933093246665">
-                <bendpoint startX="157" startY="9" endX="-1" endY="81"/>
-              </sourceConnection>
-            </child>
-            <child xsi:type="archimate:DiagramObject" id="31fe1f11-0085-4329-92df-8f31c743931f" archimateElement="f2383cf6-a939-4244-9503-8265788fee2d">
-              <bounds x="129" y="252" width="155" height="55"/>
-              <sourceConnection xsi:type="archimate:Connection" id="668171fc-dfe6-4dfb-a005-bea1e4a47481" source="31fe1f11-0085-4329-92df-8f31c743931f" target="f34b549e-bc69-4c65-8b04-3e9d0e3f20d7" archimateRelationship="8d79db58-9bb1-45ee-980f-f6b32ff9bd51">
-                <bendpoint startX="94" startY="9" endX="73" endY="69"/>
-              </sourceConnection>
-            </child>
-            <child xsi:type="archimate:DiagramObject" id="97581ae6-5fe6-45b2-8a72-e3f4b785f954" archimateElement="cc430cf0-861f-4003-837d-07a74ec287aa">
-              <bounds x="129" y="312" width="155" height="55"/>
-              <sourceConnection xsi:type="archimate:Connection" id="f9cad325-7a69-4bc8-8dc4-faf4ef75de1d" source="97581ae6-5fe6-45b2-8a72-e3f4b785f954" target="f34b549e-bc69-4c65-8b04-3e9d0e3f20d7" archimateRelationship="63a3e0c8-61d8-4a77-aff7-71f7252f5461">
-                <bendpoint startX="94" startY="9" endX="73" endY="129"/>
-              </sourceConnection>
-            </child>
-            <child xsi:type="archimate:DiagramObject" id="7ad1e2ad-f3ae-4d10-9ed2-fcf2e556e388" archimateElement="1839a87e-c894-4d66-a8fb-71a72aa9219f">
-              <bounds x="129" y="372" width="155" height="55"/>
-              <sourceConnection xsi:type="archimate:Connection" id="fd1fe87e-b910-49f2-ac07-875949d7394b" source="7ad1e2ad-f3ae-4d10-9ed2-fcf2e556e388" target="f34b549e-bc69-4c65-8b04-3e9d0e3f20d7" archimateRelationship="6e76d980-2fb3-44d5-b57d-40fdeab48a74">
-                <bendpoint startX="94" startY="9" endX="73" endY="189"/>
-              </sourceConnection>
-            </child>
-            <child xsi:type="archimate:DiagramObject" id="0834685f-406e-494e-be13-ba771563485e" archimateElement="5088a766-a14a-4a85-90b5-5b78a24343c8">
-              <bounds x="483" y="180" width="156" height="55"/>
-              <sourceConnection xsi:type="archimate:Connection" id="c835a0d4-bcf9-4787-b8fd-465eb85233b5" source="0834685f-406e-494e-be13-ba771563485e" target="e970fb3e-0087-4610-8bf4-935f071eba74" archimateRelationship="1b1d9793-aca9-4a92-b8af-1bb5c0dfa78f">
-                <bendpoint startX="-93" startY="9" endX="-74" endY="69"/>
-              </sourceConnection>
-            </child>
-            <child xsi:type="archimate:DiagramObject" id="d9df79e4-6715-4dae-b349-88a7ad28578c" archimateElement="78535caa-7aea-4ec3-8cd7-c9f963a1ded0">
-              <bounds x="483" y="240" width="156" height="55"/>
-              <sourceConnection xsi:type="archimate:Connection" id="2552a9a8-b6e7-4a9b-99c1-707c4690fa89" source="d9df79e4-6715-4dae-b349-88a7ad28578c" target="e970fb3e-0087-4610-8bf4-935f071eba74" archimateRelationship="a3fb021d-8ccc-4a73-bdc7-1f1363ad9d89">
-                <bendpoint startX="-93" startY="9" endX="-74" endY="129"/>
-              </sourceConnection>
-            </child>
-            <documentation>Este diagrama apresenta as principais atividades e responsabilidades do coordenador da equipe. Neste diagrama, são listadas as principais dificuldades e necessidades, dos alunos, em questão de planejamento, gestão, burocracia e organização, e além das suas ideias de responsabilidades e postura do coordenador.</documentation>
-          </element>
-          <element xsi:type="archimate:ArchimateDiagramModel" name="Responsabilidades de membro de adminstração" id="93a55796-43a9-4f75-bfce-eb5b91175728">
-            <child xsi:type="archimate:DiagramObject" id="15183547-d89b-4677-9036-59569e739791" targetConnections="29225474-f9c5-4aaf-acd3-4ce83a4e4e09 5ffa9bc9-83da-44a5-9278-45e28773983f 159a0502-63aa-45ec-848c-a51bda53115c 988ca433-0ac2-43b0-bbd7-e37e209a17f3" archimateElement="5b4a6e44-7845-4ac9-a073-75490ffaaa90">
-              <bounds x="312" y="72" width="138" height="55"/>
-            </child>
-            <child xsi:type="archimate:DiagramObject" id="f147df3f-a30d-44ec-96e6-c3518b2cf95a" archimateElement="b0efcf40-1014-46b2-a853-012dcad10471">
-              <bounds x="588" y="204" width="164" height="55"/>
-              <sourceConnection xsi:type="archimate:Connection" id="9ad2a328-75af-4302-b8e8-5918ba456aaf" source="f147df3f-a30d-44ec-96e6-c3518b2cf95a" target="754ff84a-50e9-4d85-9898-8188eae261ec" archimateRelationship="e5a8ce7c-7c0f-4df8-8b6e-f649a607740c">
-                <bendpoint startX="-118" startY="9" endX="-3" endY="69"/>
-              </sourceConnection>
-            </child>
-            <child xsi:type="archimate:DiagramObject" id="b3e035a6-6391-422b-9899-2bfbc31d9c4d" archimateElement="cc430cf0-861f-4003-837d-07a74ec287aa">
-              <bounds x="5" y="204" width="164" height="55"/>
-              <sourceConnection xsi:type="archimate:Connection" id="aa4d9fdd-ce7d-4cf8-8717-37c01e999480" source="b3e035a6-6391-422b-9899-2bfbc31d9c4d" target="db78f462-d86f-4fbf-af81-48d8cd285e5c" archimateRelationship="63a3e0c8-61d8-4a77-aff7-71f7252f5461">
-                <bendpoint startX="122" startY="9" endX="2" endY="69"/>
-              </sourceConnection>
-            </child>
-            <child xsi:type="archimate:DiagramObject" id="754ff84a-50e9-4d85-9898-8188eae261ec" targetConnections="9ad2a328-75af-4302-b8e8-5918ba456aaf" archimateElement="8d556e51-b501-41d6-b1d6-312d1fec3732">
-              <bounds x="449" y="144" width="212" height="55"/>
-              <sourceConnection xsi:type="archimate:Connection" id="29225474-f9c5-4aaf-acd3-4ce83a4e4e09" source="754ff84a-50e9-4d85-9898-8188eae261ec" target="15183547-d89b-4677-9036-59569e739791" archimateRelationship="e65ea121-f92c-4e4b-9d34-0db3c6799595">
-                <bendpoint startX="-171" startY="9" endX="3" endY="81"/>
-              </sourceConnection>
-            </child>
-            <child xsi:type="archimate:DiagramObject" id="db78f462-d86f-4fbf-af81-48d8cd285e5c" targetConnections="aa4d9fdd-ce7d-4cf8-8717-37c01e999480" archimateElement="6470058a-6f1f-42f8-b9bb-1daa91523993">
-              <bounds x="101" y="144" width="212" height="55"/>
-              <sourceConnection xsi:type="archimate:Connection" id="5ffa9bc9-83da-44a5-9278-45e28773983f" source="db78f462-d86f-4fbf-af81-48d8cd285e5c" target="15183547-d89b-4677-9036-59569e739791" archimateRelationship="0af14c9d-a7ba-49d7-9b98-9ac6737433ae">
-                <bendpoint startX="177" startY="9" endX="3" endY="81"/>
-              </sourceConnection>
-            </child>
-            <child xsi:type="archimate:DiagramObject" id="fe4eb0a6-8be5-489b-b524-6968cc23535c" targetConnections="e17e76bc-2ddf-4211-8e91-63fe94fe74a7" archimateElement="9a648016-532c-472c-92ee-b289971ad186">
-              <bounds x="458" y="276" width="203" height="55"/>
-              <sourceConnection xsi:type="archimate:Connection" id="988ca433-0ac2-43b0-bbd7-e37e209a17f3" source="fe4eb0a6-8be5-489b-b524-6968cc23535c" target="15183547-d89b-4677-9036-59569e739791" archimateRelationship="5b9006cd-ae4d-4f49-b69f-3ef9e58ac0e7">
-                <bendpoint startX="-175" startY="9" endX="3" endY="213"/>
-              </sourceConnection>
-            </child>
-            <child xsi:type="archimate:DiagramObject" id="f36e8aae-4639-4766-b303-684d9e499ee3" targetConnections="71d7495d-75ac-47ad-a5ca-210aab685e93" archimateElement="d5d6bf7e-a250-4293-84eb-fbe16a4033ae">
-              <bounds x="101" y="276" width="212" height="55"/>
-              <sourceConnection xsi:type="archimate:Connection" id="159a0502-63aa-45ec-848c-a51bda53115c" source="f36e8aae-4639-4766-b303-684d9e499ee3" target="15183547-d89b-4677-9036-59569e739791" archimateRelationship="eaf1ad14-dff2-433f-bfdd-740ef2f98686">
-                <bendpoint startX="177" startY="9" endX="3" endY="213"/>
-              </sourceConnection>
-            </child>
-            <child xsi:type="archimate:DiagramObject" id="088db01d-bab0-4035-83eb-0519ee0cbc02" archimateElement="605f3af2-ee58-4694-8e79-40a96cecb978">
-              <bounds x="5" y="336" width="164" height="55"/>
-              <sourceConnection xsi:type="archimate:Connection" id="71d7495d-75ac-47ad-a5ca-210aab685e93" source="088db01d-bab0-4035-83eb-0519ee0cbc02" target="f36e8aae-4639-4766-b303-684d9e499ee3" archimateRelationship="49bf55da-cc88-4056-8db4-135c9d76d86e">
-                <bendpoint startX="129" startY="9" endX="9" endY="81"/>
-              </sourceConnection>
-            </child>
-            <child xsi:type="archimate:DiagramObject" id="66545473-e33d-4a53-a50d-fd530b38753b" archimateElement="712c555f-7dd4-4dec-b51b-1924fb5c92f8">
-              <bounds x="588" y="336" width="164" height="55"/>
-              <sourceConnection xsi:type="archimate:Connection" id="e17e76bc-2ddf-4211-8e91-63fe94fe74a7" source="66545473-e33d-4a53-a50d-fd530b38753b" target="fe4eb0a6-8be5-489b-b524-6968cc23535c" archimateRelationship="a67e2b91-42ff-438c-bc1d-7534c838c90f">
-                <bendpoint startX="-118" startY="9" endX="-7" endY="69"/>
-              </sourceConnection>
-            </child>
-            <documentation>Este diagrama apresenta as principais atividades e responsabilidades de membro de administração. Neste diagrama, são listadas as principais dificuldades e necessidades, dos membros da equipe, em questão de planejamento, gestão e organização, e além das suas ideias de responsabilidades e postura de membro de administração.</documentation>
           </element>
         </folder>
+        <documentation>Pasta com diagramas sobre responsabilidades de membros da equipe.</documentation>
       </folder>
+      <documentation>Pasta com diagramas sobre a organização dos membros da equipe.</documentation>
       <element xsi:type="archimate:ArchimateDiagramModel" name="Organização geral" id="d642a205-6b19-4f00-a331-c7f789db3271" viewpoint="organization">
         <child xsi:type="archimate:DiagramObject" id="c0873782-03a2-4e45-ac7b-cf3fcf89c45a" targetConnections="db63df65-766b-4dd2-b566-812d82b5372c" archimateElement="1a4843e0-de56-44b6-8406-becd175c2c2a">
           <bounds x="-12" y="96" width="793" height="469"/>
