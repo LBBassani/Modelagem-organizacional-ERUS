@@ -30,8 +30,9 @@
     <element xsi:type="archimate:BusinessActor" name="Equipe de Marketing" id="fc3f8301-d1e2-4749-bbf1-558341f2e04d">
       <documentation>Equipe que promove a equipe nas redes sociais. Essa equipe é responsável por manter o engajamento da sociedade nas atividades promovidas pela equipe, além de manter atualizada as informações do site, postando artigos, materiais construídos pela equipe e seus membros, fotos e relatos de eventos e fornecendo as condições adequadas para que as equipes tenham apoio e respeito da sociedade.</documentation>
     </element>
-    <element xsi:type="archimate:BusinessActor" name="Equipe de Apresentações" id="2d99ff03-483e-4c58-a717-6f08952663fb">
-      <documentation>Equipe responsável por organizar, escalar e treinar membros para realizar apresentações. As apresentações podem ser palestras relativas a robótica ou a ferramentas específicas de robótica, ou ainda sobre o laboratório e suas atividades. Essa equipe precisa assegurar as condições de apresentações, como local, materiais utilizados, texto base e pontos principais que devem ser apresentados.</documentation>
+    <element xsi:type="archimate:BusinessActor" name="Equipe de Gerencia de Conteúdo (Projeto PATE)" id="2d99ff03-483e-4c58-a717-6f08952663fb">
+      <documentation>O PATE é o projeto responsável pela organização, administração e geração de conteúdo e robôs para participação de eventos como feiras, mostras e congressos. Cabe a ele estar atualizado com os eventos nas áreas de interesse da ERUS, como robótica competitiva, robótica educacional, embarcados, IoT/indústria 4.0 e organização de eventos de robótica. Seus integrantes possuem interesse em participar ou treinar e instruir os outros membros da ERUS para apresentações e mostras que a equipe venha a participar, como Mostra de Profissões, Jornada Integrada de Extensão e apresentações para alunos de ensino básico e superior.
+A Equipe de Gerencia de Conteúdo é responsável por organizar, escalar e treinar membros para realizar apresentações. As apresentações podem ser palestras relativas a robótica ou a ferramentas específicas de robótica, ou ainda sobre o laboratório e suas atividades. Essa equipe precisa assegurar as condições de apresentações, como local, materiais utilizados, texto base e pontos principais que devem ser apresentados.</documentation>
     </element>
     <element xsi:type="archimate:BusinessRole" name="Líder de Projeto" id="fc11f633-841d-4df2-a65e-8db7372b1c39">
       <documentation>O líder tem a responsabilidade de guiar a equipe, organizando, ajudando e dando suporte ao seu trabalho e dos demais membros no projeto. É responsável pelo aprimoramento da equipe.</documentation>
@@ -296,7 +297,7 @@ Possui foco em tecnologias de hardware e visão, procurando manter um projeto di
               <bounds x="336" y="24" width="120" height="55"/>
             </child>
           </element>
-          <element xsi:type="archimate:ArchimateDiagramModel" name="Responsabilidades da equipe de apresentações" id="a67420c6-5dde-4100-b00a-68738f6f2fb8">
+          <element xsi:type="archimate:ArchimateDiagramModel" name="Responsabilidades da equipe de gerencia de conteúdo" id="a67420c6-5dde-4100-b00a-68738f6f2fb8">
             <child xsi:type="archimate:DiagramObject" id="cff6e291-80db-4f68-8c68-692f8946869d" archimateElement="2d99ff03-483e-4c58-a717-6f08952663fb">
               <bounds x="335" y="42" width="134" height="55"/>
             </child>
@@ -602,6 +603,7 @@ Possui foco em tecnologias de hardware e visão, procurando manter um projeto di
                 <bendpoint startX="122" startY="-15" endX="-13" endY="47"/>
               </sourceConnection>
             </child>
+            <documentation>Este diagrama apresenta as principais atividades e responsabilidades da Equipe Administrativa. Neste diagrama, são listadas as principais dificuldades e necessidades, dos alunos, em questão de planejamento, gestão, burocracia e organização, e além das suas ideias de responsabilidades e postura da equipe que cuidará da administração do laboratório. Mesmo que todos os membros da ERUS estejam incluidos nesta equipe, é necessário que conheçam suas responsabilidades administrativas.</documentation>
           </element>
         </folder>
         <documentation>Pasta com diagramas sobre responsabilidades de membros da equipe.</documentation>
