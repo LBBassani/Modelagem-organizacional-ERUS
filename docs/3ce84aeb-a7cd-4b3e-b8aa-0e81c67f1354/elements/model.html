@@ -1,0 +1,670 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html class="frame" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	<title>ERUS</title>
+
+	<!-- JQUERY (use 1.x branch to be compatible with IE 6/7/8) -->
+	<script type="text/javascript" src="../../lib/jquery/js/jquery-1.11.2.min.js"></script>
+	<!-- BOOTSTRAP -->
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap-3.3.2.min.css">
+	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap-theme-3.3.2.min.css">
+	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
+	<!-- REPORT SPECIFIC -->
+	<link type="text/css" rel="stylesheet" href="../../css/model.css">
+	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
+	<script type="text/javascript" src="../../js/frame.js"></script>
+	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+</head>
+
+<body>
+	<div class="panel panel-default root-panel">
+
+		<div class="panel-heading root-panel-heading">
+            <!-- Name -->
+               <b>ERUS</b>
+
+            <!-- If a View with Viewpoint -->
+		</div>
+
+		<div class="panel-body root-panel-body">
+		    <!-- If this is a digram model (has children and no bounds) show the image -->
+
+			<div role="tabpanel">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+                    <!-- Purpose / Documentation / Content -->
+                       <li role="presentation" class="active"><a href="#documentation" aria-controls="documentation" role="tab" data-toggle="tab" class="i18n-purpose"></a></li>
+
+                    <!-- Properties -->
+                    <li role="presentation"><a href="#properties" aria-controls="properties" role="tab" data-toggle="tab" class="i18n-properties"></a></li>
+
+						<li role="presentation"><a href="#query" aria-controls="query" role="tab" data-toggle="tab" class="i18n-query"></a></li>
+				</ul>
+
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="documentation">
+						<textarea id="docsrc" style="display:none">Gerar um modelo que promova entendimento da organiza&#231;&#227;o da equipe e das atividades da ERUS. Este entendimento &#233; essencial para que os objetivos da equipe sejam alcan&#231;ados da forma mais tranquila e eficiente poss&#237;vel.</textarea>
+						<div id="doctgt" style="white-space:pre-wrap"></div>
+					</div>
+					<div role="tabpanel" class="tab-pane" id="properties">
+						<table class="table table-striped table-hover table-condensed">
+							<thead>
+								<tr>
+									<th class="i18n-key"></th>
+									<th class="i18n-value"></th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+						<div role="tabpanel" class="tab-pane" id="query">
+						<br>
+						<style>
+						#myprompt {
+						    width: 80%;
+						    font-family: Consolas,Monaco, monospace;
+						}
+						</style>
+
+						<div id='myconsole'></div>
+
+						<p>
+							<tt><span id="useid">alasql</span> &gt;</tt> <input id='myprompt' autofocus/> 
+						</p>
+
+						<script src='../../lib/alasql/alasql.min.js'></script>
+
+						<script>
+							function decodeURL(s) {
+								return decodeURIComponent(s.replace(/\+/g, "%20"));
+							}
+
+							var first = decodeURI(location.search.substr(1));
+						 	alasql.options.logtarget = 'myconsole';
+							alasql.prompt('myprompt','useid');
+							alasql.prompt('myprompt','useid', first);
+
+							var dataElements = [ ];	  
+						  	var dataProperties = [ ];
+						 	var dataRelationships = [ ];
+						 	var dataViews = [ ];
+						 	var dataViewsContent = [ ];
+						 	var dataFolders = [ ];
+						 	var dataFoldersContent = [ ];
+
+							dataFolders.push({id:"3ce84aeb-a7cd-4b3e-b8aa-0e81c67f1354", type:"ArchimateModel", name:decodeURL("ERUS"), documentation:decodeURL("")});
+								dataFoldersContent.push({folderid:"3ce84aeb-a7cd-4b3e-b8aa-0e81c67f1354", contentid:"d5010ef4-089b-4606-83f6-22a14d7c60eb", contenttype:"Folder"});
+								dataFolders.push({id:"d5010ef4-089b-4606-83f6-22a14d7c60eb", type:"Folder", name:decodeURL("Strategy"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"3ce84aeb-a7cd-4b3e-b8aa-0e81c67f1354", contentid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contenttype:"Folder"});
+								dataFolders.push({id:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", type:"Folder", name:decodeURL("Business"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"1a4843e0-de56-44b6-8406-becd175c2c2a", contenttype:"BusinessActor"});
+										dataElements.push({id:"1a4843e0-de56-44b6-8406-becd175c2c2a", type:"BusinessActor", name:decodeURL("ERUS"), documentation:decodeURL("A+Equipe+de+Rob%C3%B3tica+da+UFES+%C3%A9+um+projeto+de+extens%C3%A3o+do+centro+tecnol%C3%B3gico+da+UFES.+%C3%89+uma+equipe+multidisciplinar+que+procura+estudar%2C+propagar+e+incentivar+a+rob%C3%B3tica+no+estado+do+Espirito+Santo.+Foi+fundada+em+2012%2C+por+alunos+da+engenharia+de+computa%C3%A7%C3%A3o+da+Universidade+Federal+do+Esp%C3%ADrito+Santo%2C+ex-integrantes+da+equipe+de+rob%C3%B3tica+UFES+Ultrabots+%28projeto+do+Laborat%C3%B3rio+de+Rob%C3%B3tica+Educacional+%E2%80%93+LRE%2C+fundado+em+2006+e+vinculado+ao+curso+de+Engenharia+Mec%C3%A2nica+da+UFES%29%2C+que+obtiveram+excelentes+resultados+na+categoria+IEEE+SEK%2C+fundando+a+ERUS+para+participar+de+desafios+maiores.")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"24f64aff-ddac-44e2-997e-3b3e2ecead95", contenttype:"BusinessActor"});
+										dataElements.push({id:"24f64aff-ddac-44e2-997e-3b3e2ecead95", type:"BusinessActor", name:decodeURL("Equipe+de+Projeto+de+Extens%C3%A3o"), documentation:decodeURL("Equipes+que+realizam+trabalhos+de+extens%C3%A3o+na+ERUS%2C+promovendo+a+rob%C3%B3tica+e+a+equipe+para+a+sociedade.+O+trabalho+de+equipes+de+extens%C3%A3o+%C3%A9+levar+os+conhecimentos+e+ferramentas+da+universidade+at%C3%A9+a+comunidade+a+fim+de+fornecer+um+conhecimento.+A+fim+de+afirmar+a+import%C3%A2ncia+da+rob%C3%B3tica+como+ferramenta+de+inova%C3%A7%C3%A3o%2C+a+ERUS+possui+diversos+projetos+de+extens%C3%A3o.")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"8b47986b-cc0b-41a7-b290-53608a128c86", contenttype:"BusinessActor"});
+										dataElements.push({id:"8b47986b-cc0b-41a7-b290-53608a128c86", type:"BusinessActor", name:decodeURL("Equipe+da+Comiss%C3%A3o+de+Eventos"), documentation:decodeURL("Equipe+que+organiza+eventos%2C+escrevendo+editais%2C+procurando+patroc%C3%ADnios%2C+reservando+locais+de+competi%C3%A7%C3%A3o+e+perman%C3%AAncia+de+competidores%2C+organizando+as+inscri%C3%A7%C3%B5es+e+pagamentos.+Essa+equipe+envolve+trabalhos+da+maioria+das+outras+equipes%2C+precisando+mobilizar+toda+a+equipe+nos+grandes+eventos%2C+como+o+TRUFES+-+Torneio+de+Rob%C3%B3tica+da+UFES.%0A%0A%0A")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"7cae5c1c-3ddd-4c06-8f00-e80ec6312096", contenttype:"BusinessActor"});
+										dataElements.push({id:"7cae5c1c-3ddd-4c06-8f00-e80ec6312096", type:"BusinessActor", name:decodeURL("Equipe+Administrativa"), documentation:decodeURL("Equipe+que+promove+a+organiza%C3%A7%C3%A3o+e+o+trabalho+em+equipe+dos+membros+da+ERUS%2C+coordenando+as+a%C3%A7%C3%B5es+e+criando+as+condi%C3%A7%C3%B5es+necess%C3%A1rias+para+a+atua%C3%A7%C3%A3o+da+equipe%2C+dentro+e+fora+da+universidade.+Fornece+aos+participantes+conhecimentos+em+administra%C3%A7%C3%A3o%2C+desenvolvimento+das+habilidades+de+intera%C3%A7%C3%A3o+interpessoais+e+experiencia+em+lidar+com+contratempos.%0A%0A%0A%0A")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"15d7ce68-1c46-4d1b-bb53-ccb4629a6053", contenttype:"BusinessActor"});
+										dataElements.push({id:"15d7ce68-1c46-4d1b-bb53-ccb4629a6053", type:"BusinessActor", name:decodeURL("Equipe+de+Ensino"), documentation:decodeURL("Projeto+que+promove+o+aprendizado+dentro+e+fora+da+ERUS.+O+aprendizado+%C3%A9+a+forma+mais+direta+de+levar+o+conhecimento+e+a+%C3%A1rea+da+rob%C3%B3tica+at%C3%A9+a+sociedade%2C+atrav%C3%A9s+de+minicursos%2C+cursos+e+workshops.+A+ERUS+tanto+organiza+cursos+independentes+quanto+cursos+para+eventos+e+atividades+para+agregar+ao+curr%C3%ADculo+dos+participantes.")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"d24cdae3-af9d-4fc3-8835-faa0b728f892", contenttype:"BusinessActor"});
+										dataElements.push({id:"d24cdae3-af9d-4fc3-8835-faa0b728f892", type:"BusinessActor", name:decodeURL("Equipe+Competitiva"), documentation:decodeURL("Equipe+respons%C3%A1vel+por+participa%C3%A7%C3%A3o+em+competi%C3%A7%C3%B5es.+Existem+diversas+sub-equipes+dentro+da+equipe+competitiva%2C+uma+vez+que+a+ERUS+possui+interesse+em+diversos+tipos+de+competi%C3%A7%C3%B5es.+A+ERUS+acredita+que%2C+quando+participam+de+competi%C3%A7%C3%B5es%2C+continuam+carregando+seu+legado%2C+mostrando+todo+o+conhecimento+que+puderam+desenvolver+e+inspirando+alunos+mais+novos+a+se+esfor%C3%A7arem%2C+mostrando+que+com+conhecimento+e+perseveran%C3%A7a+todos+conseguem+chegar+muito+longe.+Dessa+forma%2C+import%C3%A2ncia+das+participa%C3%A7%C3%B5es+em+competi%C3%A7%C3%B5es+para+a+comunidade+dos+alunos+%C3%A9+muito+grande+e+n%C3%A3o+apresenta+apenas+um+crescimento+para+cada+aluno+que+pode+ter+a+oportunidade+de+competir%2C+mas+tamb%C3%A9m+para+todos+que+percebem+o+seu+pr%C3%B3prio+potencial+ao+ver+seus+colegas+chegarem+t%C3%A3o+longe.")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"fc3f8301-d1e2-4749-bbf1-558341f2e04d", contenttype:"BusinessActor"});
+										dataElements.push({id:"fc3f8301-d1e2-4749-bbf1-558341f2e04d", type:"BusinessActor", name:decodeURL("Equipe+de+Marketing"), documentation:decodeURL("Equipe+que+promove+a+equipe+nas+redes+sociais.+Essa+equipe+%C3%A9+respons%C3%A1vel+por+manter+o+engajamento+da+sociedade+nas+atividades+promovidas+pela+equipe%2C+al%C3%A9m+de+manter+atualizada+as+informa%C3%A7%C3%B5es+do+site%2C+postando+artigos%2C+materiais+constru%C3%ADdos+pela+equipe+e+seus+membros%2C+fotos+e+relatos+de+eventos+e+fornecendo+as+condi%C3%A7%C3%B5es+adequadas+para+que+as+equipes+tenham+apoio+e+respeito+da+sociedade.")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"2d99ff03-483e-4c58-a717-6f08952663fb", contenttype:"BusinessActor"});
+										dataElements.push({id:"2d99ff03-483e-4c58-a717-6f08952663fb", type:"BusinessActor", name:decodeURL("Equipe+de+Apresenta%C3%A7%C3%B5es"), documentation:decodeURL("Equipe+respons%C3%A1vel+por+organizar%2C+escalar+e+treinar+membros+para+realizar+apresenta%C3%A7%C3%B5es.+As+apresenta%C3%A7%C3%B5es+podem+ser+palestras+relativas+a+rob%C3%B3tica+ou+a+ferramentas+espec%C3%ADficas+de+rob%C3%B3tica%2C+ou+ainda+sobre+o+laborat%C3%B3rio+e+suas+atividades.+Essa+equipe+precisa+assegurar+as+condi%C3%A7%C3%B5es+de+apresenta%C3%A7%C3%B5es%2C+como+local%2C+materiais+utilizados%2C+texto+base+e+pontos+principais+que+devem+ser+apresentados.")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"fc11f633-841d-4df2-a65e-8db7372b1c39", contenttype:"BusinessRole"});
+										dataElements.push({id:"fc11f633-841d-4df2-a65e-8db7372b1c39", type:"BusinessRole", name:decodeURL("L%C3%ADder+de+Projeto"), documentation:decodeURL("O+l%C3%ADder+tem+a+responsabilidade+de+guiar+a+equipe%2C+organizando%2C+ajudando+e+dando+suporte+ao+seu+trabalho+e+dos+demais+membros+no+projeto.+%C3%89+respons%C3%A1vel+pelo+aprimoramento+da+equipe.")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"0f3174e2-7fa6-4d3b-b5a1-0c82f131e5f6", contenttype:"BusinessRole"});
+										dataElements.push({id:"0f3174e2-7fa6-4d3b-b5a1-0c82f131e5f6", type:"BusinessRole", name:decodeURL("Vice-l%C3%ADder+de+Projeto"), documentation:decodeURL("Membro+suplente+e+ajudante+do+l%C3%ADder.+Apoia+a+tomada+de+decis%C3%B5es+do+l%C3%ADder%2C+fornecendo+informa%C3%A7%C3%B5es+e+pontos+de+vista+diferentes+sobre+a+equipe.+Faz+papel+de+l%C3%ADder+em+periodos+de+aux%C3%AAncia+do+mesmo.")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"3f028515-569b-4ec5-899c-a109630903e1", contenttype:"BusinessActor"});
+										dataElements.push({id:"3f028515-569b-4ec5-899c-a109630903e1", type:"BusinessActor", name:decodeURL("Equipe+de+Seguidor+de+Linhas"), documentation:decodeURL("Equipe+que+participa+de+pelo+menos+uma+competi%C3%A7%C3%A3o+de+seguidor+de+Linha+ao+longo+do+Brasil%2C+construindo+ou+melhorando+pelo+menos+um+modelo+de+rob%C3%B4+para+cada+competi%C3%A7%C3%A3o.+Proporciona+aos+participantes+contato+com+a+%C3%A1rea+de+eletr%C3%B4nica+b%C3%A1sica+%28microcontrolador%2C+pcbs+e+circuitos+b%C3%A1sicos%29%2C+controle+%28PID+e+etc%29+e+mec%C3%A2nica+%28fabrica%C3%A7%C3%A3o%2C+tra%C3%A7%C3%A3o+e+chassi%29.+Aprimorado+o+trabalho+em+equipe%2C+a+organiza%C3%A7%C3%A3o+e+a+vis%C3%A3o+de+oportunidades+dentro+da+equipe%2C+por+meio+da+did%C3%A1tica%2C+dos+membros+participantes.%0A")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"407de98e-7009-442d-810b-81da8879b35f", contenttype:"BusinessActor"});
+										dataElements.push({id:"407de98e-7009-442d-810b-81da8879b35f", type:"BusinessActor", name:decodeURL("Equipe+de+Sum%C3%B4"), documentation:decodeURL("Atiga+equipe+da+categoria+IEEE-OPEN+%28LARC%29.+Atualmente+foca+no+desenvolvimento+de+um+rob%C3%B4+para+participar+de+ao+menos+uma+competi%C3%A7%C3%A3o+de+Sum%C3%B4+pelo+Brasil.++Proporciona+aos+participantes+terem+contato+com+as+etapas+de+produ%C3%A7%C3%A3o+de+um+rob%C3%B4+%28planejamento%2C+constru%C3%A7%C3%A3o%2C+programa%C3%A7%C3%A3o+e+treinamento%29%2C+trabalho+em+equipe%2C+organiza%C3%A7%C3%A3o+de+prazos+e+tamb%C3%A9m+proporciona+a+troca+de+conhecimentos+das+%C3%A1reas+envolvidas+%28el%C3%A9trica%2C+inform%C3%A1tica%2C+mec%C3%A2nica%2C+etc%29+com+membros+de+diversos+cursos.")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"c7768bda-38dd-413c-860b-2c3470d55948", contenttype:"BusinessActor"});
+										dataElements.push({id:"c7768bda-38dd-413c-860b-2c3470d55948", type:"BusinessActor", name:decodeURL("Equipe+de+Futebol+Rob%C3%B3tico"), documentation:decodeURL("Equipe+que+participa+de+competi%C3%A7%C3%B5es+ligadas+a+futebol+rob%C3%B3tico.+Essa+equipe+%C3%A9+formada+por+tr%C3%AAs+sub-equipes+diferentes+em+duas+categorias+de+futebol+rob%C3%B3tico%3A+Very+Small+Size+Soccer+e+Simula%C3%A7%C3%A3o+2D.+Ambas+categorias+lidam+com+a+ideia+da+constru%C3%A7%C3%A3o+de+um+time+coordenado+de+agentes+rob%C3%B3ticos+para+alcan%C3%A7ar+um+objetivo+em+comum+entre+eles%3A+vencer+uma+partida+de+futebol.+Para+isso%2C+essa+equipe+deve+estudar+t%C3%A9cnicas+de+Inteligencia+Coletiva%2C+coordena%C3%A7%C3%A3o+centralizada+e+descentralizada+de+agentes%2C+conjunto+de+a%C3%A7%C3%B5es+dependentes+e+independentes+e+otimiza%C3%A7%C3%A3o+de+tomada+de+decis%C3%A3o%2C+al%C3%A9m+de+lidar+com+problemas+comuns+em+rob%C3%B3tica+como+motion+planning%2C+filtros+e+adi%C3%A7%C3%A3o+de+informa%C3%A7%C3%B5es+sensoriais%2C+sistemas+de+localiza%C3%A7%C3%A3o+rob%C3%B3tica%2C+sistemas+de+controle%2C+entre+outros.")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"7faf7036-6384-4e48-aa34-386be77a7a71", contenttype:"BusinessActor"});
+										dataElements.push({id:"7faf7036-6384-4e48-aa34-386be77a7a71", type:"BusinessActor", name:decodeURL("Equipe+VSSS-ERUS"), documentation:decodeURL("Equipe+que+desenvolve+pelo+menos+1+time+de+rob%C3%B4s+%283+rob%C3%B4s%29+para+competir+na+categoria+VSSS+na+LARC.+Proporciona+aos+participantes+terem+contato+com+as+etapas+de+produ%C3%A7%C3%A3o+de+um+rob%C3%B4+%28planejamento%2C+constru%C3%A7%C3%A3o%2C+programa%C3%A7%C3%A3o+e+treinamento%29%2C+trabalho+em+equipe%2C+organiza%C3%A7%C3%A3o+de+prazos+e+tamb%C3%A9m+proporciona+a+troca+de+conhecimentos+das+%C3%A1reas+envolvidas+%28el%C3%A9trica%2C+inform%C3%A1tica%2C+mec%C3%A2nica%2C+etc%29+com+membros+de+diversos+cursos.%0APossui+foco+em+tecnologias+de+software+e+em+gera%C3%A7%C3%A3o+de+documenta%C3%A7%C3%A3o+para+gerar+um+projeto+a+longo+prazo.+%C3%89+a+equipe+mais+antiga+da+ERUS+a+ainda+manter+suas+atividades.%0A%0A")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"6944fbaa-7c9c-4fcc-ad00-8e59171696d8", contenttype:"BusinessActor"});
+										dataElements.push({id:"6944fbaa-7c9c-4fcc-ad00-8e59171696d8", type:"BusinessActor", name:decodeURL("Equipe+de+Simula%C3%A7%C3%A3o+2D"), documentation:decodeURL("Equipe+que+procura+desenvolver+um+time+de+futebol+simulado+para+a+categoria+Simula%C3%A7%C3%A3o+2D%2C+e+participar+de+ao+menos+uma+competi%C3%A7%C3%A3o+pelo+Brasil+todo+ano.+A+categoria+de+simula%C3%A7%C3%A3o+permite+o+desenvolvimento+de+IAs+avan%C3%A7adas%2C+sendo+uma+categoria+puramente+focada+no+problema+de+coopera%C3%A7%C3%A3o+multiagente+de+rob%C3%B4s.+Atualmente+junta+membros+das+equipes+VSSS-ERUS+e+V3S-LRE+para+participar+de+competi%C3%A7%C3%B5es.")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"2fbfaa43-6239-40cd-a110-de6ea2568b17", contenttype:"BusinessActor"});
+										dataElements.push({id:"2fbfaa43-6239-40cd-a110-de6ea2568b17", type:"BusinessActor", name:decodeURL("Equipe+V3S-LRE"), documentation:decodeURL("Equipe+que+desenvolve+pelo+menos+1+time+de+rob%C3%B4s+%283+rob%C3%B4s%29+para+competir+na+categoria+VSSS+na+LARC.+Proporciona+aos+participantes+terem+contato+com+as+etapas+de+produ%C3%A7%C3%A3o+de+um+rob%C3%B4+%28planejamento%2C+constru%C3%A7%C3%A3o%2C+programa%C3%A7%C3%A3o+e+treinamento%29%2C+trabalho+em+equipe%2C+organiza%C3%A7%C3%A3o+de+prazos+e+tamb%C3%A9m+proporciona+a+troca+de+conhecimentos+das+%C3%A1reas+envolvidas+%28el%C3%A9trica%2C+inform%C3%A1tica%2C+mec%C3%A2nica%2C+etc%29+com+membros+de+diversos+cursos.+%0APossui+foco+em+tecnologias+de+hardware+e+vis%C3%A3o%2C+procurando+manter+um+projeto+din%C3%A2mico+e+modular.+Essa+equipe+foi+fundada+pelo+LRE+-+Laborat%C3%B3rio+de+Rob%C3%B3tica+Educacional%2C+e+adotada+pela+ERUS.")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"06128c48-c9ed-4a4c-a352-507dd18a46c0", contenttype:"BusinessRole"});
+										dataElements.push({id:"06128c48-c9ed-4a4c-a352-507dd18a46c0", type:"BusinessRole", name:decodeURL("Membro+de+Projeto"), documentation:decodeURL("Membro+do+time%2C+trabalha+no+projeto%2C+no+planejamento+e+pr%C3%A1tica+das+atividades+da+equipe.+Muitos+membros+s%C3%A3o+especializados+em+certas+%C3%A1reas%2C+como+eletr%C3%B4nica%2C+mec%C3%A2nica%2C+software%2C+marketing+ou+organiza%C3%A7%C3%A3o.+Uma+equipe+equilibrada+possui+membros+das+%C3%A1reas+necess%C3%A1rias+para+seu+desenvolvimento.")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"56473f70-5fd5-4472-8447-65e5d5cac4da", contenttype:"BusinessRole"});
+										dataElements.push({id:"56473f70-5fd5-4472-8447-65e5d5cac4da", type:"BusinessRole", name:decodeURL("Coordenador"), documentation:decodeURL("O+coordenador+do+projeto+precisa+ser+um+professor+vinculado+a+UFES.+Ele+possui+uma+s%C3%A9rie+de+responsabilidades+para+com+os+membros+e+para+com+o+projeto%2C+auxiliando%2C+assistindo+e+promovendo+o+crescimento+individual+dos+membros+e+geral+do+projeto.")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"5b4a6e44-7845-4ac9-a073-75490ffaaa90", contenttype:"BusinessRole"});
+										dataElements.push({id:"5b4a6e44-7845-4ac9-a073-75490ffaaa90", type:"BusinessRole", name:decodeURL("Membro+de+Administra%C3%A7%C3%A3o"), documentation:decodeURL("Membro+da+equipe+que+auxilia+o+coordenador%2C+tendo+responsabilidades+mais+espec%C3%ADficas+e+contato+mais+pr%C3%B3ximo+com+a+realidade+de+cada+membro+do+laborat%C3%B3rio.+Algumas+especialidades+de+membros+de+administra%C3%A7%C3%A3o+incluem%3A+manuten%C3%A7%C3%A3o+e+organiza%C3%A7%C3%A3o+do+espa%C3%A7o+de+trabalho+e+ferramentas%3B+observa%C3%A7%C3%A3o+e+orienta%C3%A7%C3%A3o+de+membros+do+laborat%C3%B3rio%3B+observa%C3%A7%C3%A3o+e+orienta%C3%A7%C3%A3o+de+desenvolvimento+de+projetos.")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"d6a706e2-bd6c-4541-964a-eb9b35c9a2c4", contenttype:"BusinessService"});
+										dataElements.push({id:"d6a706e2-bd6c-4541-964a-eb9b35c9a2c4", type:"BusinessService", name:decodeURL("Responsabiliza%C3%A7%C3%A3o+Burocr%C3%A1tica"), documentation:decodeURL("Procurar+se+informar+e+se+responsabilizar+sobre+os+cumprimentos+de+burocracias%2C+procedimentos+e+protocolos+necess%C3%A1rios+para+as+atividades+do+laborat%C3%B3rio.%0A")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"8d556e51-b501-41d6-b1d6-312d1fec3732", contenttype:"BusinessService"});
+										dataElements.push({id:"8d556e51-b501-41d6-b1d6-312d1fec3732", type:"BusinessService", name:decodeURL("Realizar+Acompanhamento"), documentation:decodeURL("Realizar+o+acompanhamento+das+atividades+praticadas+pelos+alunos%2C+em+especial+por+alunos+menos+experientes")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"16be25b9-210f-4b79-bef9-6b6f25b52666", contenttype:"BusinessService"});
+										dataElements.push({id:"16be25b9-210f-4b79-bef9-6b6f25b52666", type:"BusinessService", name:decodeURL("Acompanhamento+Finaceiro"), documentation:decodeURL("Atentar-se+a+situa%C3%A7%C3%A3o+financeira+da+equipe+para+o+cumprimento+da+atividade%2C+auxiliando+na+arrecada%C3%A7%C3%A3o+de+recursos%2C+se+necess%C3%A1rio.")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"0616236c-4a3d-4b66-a821-a81963d553ea", contenttype:"BusinessService"});
+										dataElements.push({id:"0616236c-4a3d-4b66-a821-a81963d553ea", type:"BusinessService", name:decodeURL("Acompanhamento+de+Documenta%C3%A7%C3%A3o"), documentation:decodeURL("Auxiliar+na+documenta%C3%A7%C3%A3o+do+andamento+das+atividades%2C+incluindo%3A+auxiliar+e+incentivar+boas+pr%C3%A1ticas+de+projeto%3B+tirar+d%C3%BAvidas+sobre+padr%C3%A3o+de+documenta%C3%A7%C3%A3o+do+laborat%C3%B3rio%3B+ajudar+com+os+pontos+principais+que+precisam+ser+documentados.%0A")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"b0efcf40-1014-46b2-a853-012dcad10471", contenttype:"BusinessService"});
+										dataElements.push({id:"b0efcf40-1014-46b2-a853-012dcad10471", type:"BusinessService", name:decodeURL("Acompanhamento+das+Atividades"), documentation:decodeURL("Acompanhar+o+andamento+das+atividades%2C+incluindo%3A+prestar+aux%C3%ADlio+no+cumprimento+de+prazos+estabelecidos%3B+aux%C3%ADlio+em+pesquisas+e+capacita%C3%A7%C3%B5es+necess%C3%A1rias+para+o+cumprimento+da+atividade%2C+em+especial+para+a+realiza%C3%A7%C3%A3o+de+convite+de+professores%2C+especialistas+ou+pesquisadores+de+outras+institui%C3%A7%C3%B5es+para+ajudar+na+capacita%C3%A7%C3%A3o+necess%C3%A1ria.%0A")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"4a542157-d43b-499b-871f-4782ebe5447d", contenttype:"BusinessService"});
+										dataElements.push({id:"4a542157-d43b-499b-871f-4782ebe5447d", type:"BusinessService", name:decodeURL("Acompanhamento+de+Planejamento"), documentation:decodeURL("Auxiliar+no+planejamento+das+atividades%2C+incluindo%3A+prestar+auxilio+na+cria%C3%A7%C3%A3o+de+cronograma%3B+organiza%C3%A7%C3%A3o+e+ger%C3%AAncia+de+pessoas+no+projeto%3B+defini%C3%A7%C3%A3o+de+prazos+e+objetivos+intermedi%C3%A1rios+para+o+cumprimento+da+atividade.")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"eea945c5-8da2-4e2c-9e96-bb898e38730d", contenttype:"BusinessService"});
+										dataElements.push({id:"eea945c5-8da2-4e2c-9e96-bb898e38730d", type:"BusinessService", name:decodeURL("Atentar-se+a+Oportunidades"), documentation:decodeURL("O+coordenador+deve+mostrar-se+sempre+atento+as+oportunidades+que+surgem+que+podem+ser+ben%C3%A9fica+a+equipe%2C+como+parceirias+e+editais+de+compra%2C+paritipa%C3%A7%C3%B5es+em+eventos+ou+competi%C3%A7%C3%B5es+e+bolsas.")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"69b902f6-7505-4041-9487-89ad18325fb7", contenttype:"BusinessService"});
+										dataElements.push({id:"69b902f6-7505-4041-9487-89ad18325fb7", type:"BusinessService", name:decodeURL("Atentar-se+a+Editais"), documentation:decodeURL("Atentar-se+a+Editais+e+oportunidades+que+sejam+de+interesse+da+equipe%2C+em+especial+sobre+aquisi%C3%A7%C3%A3o+de+equipamentos+e+materiais.")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"80995fdb-57de-46e3-b700-9c9da9e9be79", contenttype:"BusinessService"});
+										dataElements.push({id:"80995fdb-57de-46e3-b700-9c9da9e9be79", type:"BusinessService", name:decodeURL("Atentar-se+a+Parcerias"), documentation:decodeURL("Estar+sempre+engajado+com+os+contatos+e+parcerias+do+laborat%C3%B3rio%2C+como+institui%C3%A7%C3%B5es+parceiras+ou+patrocinadoras+ou+laborat%C3%B3rios+e+professores+que+desejam+fazer+trabalhos+em+conjunto%2C+em+especial+durante+os+primeiros+contatos%2C+visando+a+boa+imagem+do+laborat%C3%B3rio%2C+e+durante+fechamento+de+contratos%2C+atentando-se+a+legalidades+e+burocracias.")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"6470058a-6f1f-42f8-b9bb-1daa91523993", contenttype:"BusinessService"});
+										dataElements.push({id:"6470058a-6f1f-42f8-b9bb-1daa91523993", type:"BusinessService", name:decodeURL("Manter-se+Engajado+com+o+Laborat%C3%B3rio"), documentation:decodeURL("Sempre+ser+capaz+de+dizer+sobre+o+andamento+do+laborat%C3%B3rio%2C+o+que+exije+sua+presen%C3%A7a+e+interesse+constantes+na+equipe.")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"d0ed1a3c-a8d1-44f5-860f-75adb9eb382a", contenttype:"BusinessService"});
+										dataElements.push({id:"d0ed1a3c-a8d1-44f5-860f-75adb9eb382a", type:"BusinessService", name:decodeURL("Manter-se+em+Comunica%C3%A7%C3%A3o+com+o+Laborat%C3%B3rio"), documentation:decodeURL("Comunicar-se+de+forma+ativa+com+os+membros+do+laborat%C3%B3rio%2C+avisando+previamente+de+quaisquer+problemas+ou+avisos+que+este+tenha%2C+principalmente+sobre%3A+momentos+em+que+o+coordenador+precisar%C3%A1+se+abster+por+algum+motivo+de+for%C3%A7a+maior+durante+algum+per%C3%ADodo+de+tempo%2C+seja+este+grande+ou+pequeno%2C+para+que+todos+saibam+da+disponibilidade+deste%3B+Em+caso+de+levar+visitas+ao+laborat%C3%B3rio+com+inten%C3%A7%C3%A3o+de+aumentar+a+rede+de+comunica%C3%A7%C3%A3o+deste+ou+firmar+novas+parcerias%2C+a+fim+dos+alunos+poderem+se+preparar+para+apresentar+os+trabalhos+da+equipe+para+os+visitantes.%0A")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"f2383cf6-a939-4244-9503-8265788fee2d", contenttype:"BusinessService"});
+										dataElements.push({id:"f2383cf6-a939-4244-9503-8265788fee2d", type:"BusinessService", name:decodeURL("Estar+Presente+em+Econtros+Importantes"), documentation:decodeURL("Manter-se+como+principal+n%C3%B3+da+rede+de+comunica%C3%A7%C3%A3o+da+equipe%2C+estando+sempre+presente+nos+encontros+importantes+com+os+parceiros+e+conhecidos%2C+e+mantendo+a+lista+de+contato+da+equipe+atualizada+e+bem+guardada%2C+para+que+nenhum+contato+se+perca+com+o+tempo+ou+troca+de+professores+do+cargo.")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"cc430cf0-861f-4003-837d-07a74ec287aa", contenttype:"BusinessService"});
+										dataElements.push({id:"cc430cf0-861f-4003-837d-07a74ec287aa", type:"BusinessService", name:decodeURL("Estar+Presente+no+Laborat%C3%B3rio"), documentation:decodeURL("Estar+presente+no+laborat%C3%B3rio%2C+fazendo+das+visitas+e+tempo+presente+no+laborat%C3%B3rio+para+interagir+com+os+alunos+parte+de+sua+rotina.+Dar+prioridade+especial+a+reuni%C3%B5es+importantes%2C+em+especial+de+administra%C3%A7%C3%A3o+geral+onde+a+pauta+inclua+decis%C3%B5es+cr%C3%ADticas+ao+laborat%C3%B3rio.")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"1839a87e-c894-4d66-a8fb-71a72aa9219f", contenttype:"BusinessService"});
+										dataElements.push({id:"1839a87e-c894-4d66-a8fb-71a72aa9219f", type:"BusinessService", name:decodeURL("Realizar+Contatos+Externos"), documentation:decodeURL("Manter-se+como+principal+n%C3%B3+da+rede+de+comunica%C3%A7%C3%A3o+da+equipe%2C+estando+sempre+presente+nos+encontros+importantes+com+os+parceiros+e+conhecidos%2C+e+mantendo+a+lista+de+contato+da+equipe+atualizada+e+bem+guardada%2C+para+que+nenhum+contato+se+perca+com+o+tempo+ou+troca+de+professores+do+cargo.%0A")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"5088a766-a14a-4a85-90b5-5b78a24343c8", contenttype:"BusinessService"});
+										dataElements.push({id:"5088a766-a14a-4a85-90b5-5b78a24343c8", type:"BusinessService", name:decodeURL("Prestar+Relat%C3%B3rios+a+ProEx"), documentation:decodeURL("Os+relat%C3%B3rios+prestados+a+Pro-reitoria+de+Extens%C3%A3o+devem+ser+de+responsabilidade+do+coordenador%2C+sendo+preciso+que+este+se+atente+ao+conte%C3%BAdo+que+deve+ser+apresentado%2C+al%C3%A9m+dos+prazos+estabelecidos+para+tal.")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"78535caa-7aea-4ec3-8cd7-c9f963a1ded0", contenttype:"BusinessService"});
+										dataElements.push({id:"78535caa-7aea-4ec3-8cd7-c9f963a1ded0", type:"BusinessService", name:decodeURL("Orientar+os+Alunos+na+Descri%C3%A7%C3%A3o+de+Projetos+a+ProEx"), documentation:decodeURL("Orientar+e+verificar+o+andamento+da+descri%C3%A7%C3%A3o+dos+projetos+submetidos+a+ProEx+todo+ano.")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"9a648016-532c-472c-92ee-b289971ad186", contenttype:"BusinessService"});
+										dataElements.push({id:"9a648016-532c-472c-92ee-b289971ad186", type:"BusinessService", name:decodeURL("Auxiliar+o+Servi%C3%A7o+do+Coordenador"), documentation:decodeURL("Auxiliar+o+coordenador+em+suas+responsabilidades%2C+conforme+for+demandado+e+orientado+pelo+mesmo.")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"d5d6bf7e-a250-4293-84eb-fbe16a4033ae", contenttype:"BusinessService"});
+										dataElements.push({id:"d5d6bf7e-a250-4293-84eb-fbe16a4033ae", type:"BusinessService", name:decodeURL("Organizar+a+Equipe+para+Atividades+Gerais"), documentation:decodeURL("No+momento+que+surge+uma+atividade+que+necessita+de+engajamento+completo+da+equipe%2C+%C3%A9+necess%C3%A1rio+realizar+uma+organiza%C3%A7%C3%A3o+e+resolu%C3%A7%C3%A3o+de+conflitos+de+hor%C3%A1rio+e+interesses%2C+para+que+a+atividade+possa+ser+colocada+em+pr%C3%A1tica+com+a+equipe+alinhada+em+seu+desenvolvimento.")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"605f3af2-ee58-4694-8e79-40a96cecb978", contenttype:"BusinessService"});
+										dataElements.push({id:"605f3af2-ee58-4694-8e79-40a96cecb978", type:"BusinessService", name:decodeURL("Organizar+a+Equipe+para+Reuni%C3%B5es"), documentation:decodeURL("Organizar+hor%C3%A1rio%2C+meio+de+execu%C3%A7%C3%A3o+e+pauta+para+reuni%C3%B5es+gerais+e+de+lidera%C3%A7a%2C+de+forma+que+satisfa%C3%A7a+as+necessidades+da+maior+parte+poss%C3%ADvel+dos+membros+da+equipe.")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"712c555f-7dd4-4dec-b51b-1924fb5c92f8", contenttype:"BusinessService"});
+										dataElements.push({id:"712c555f-7dd4-4dec-b51b-1924fb5c92f8", type:"BusinessService", name:decodeURL("Reportar+Acontecimentos+da+Equipe"), documentation:decodeURL("Reportar+acontecimentos+importantes%2C+em+especial+da+convivencia+da+equipe%2C+para+o+coordenador.+Problemas+relacionados+a+comportamentos+ou+intera%C3%A7%C3%B5es+e+falta+de+engajamento+com+a+equipe+que+forem+reportadas+por+outros+membros+devem+ser+analisadas+e+repassadas+ao+coordenador.+Acontecimentos+como+visitas+de+interessados%2C+convites+para+eventos+e+interesse+de+parte+ou+da+totalidade+da+equipe+em+alguma+atividade+deve+ser+levada+ao+coordenador.")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"111079ea-14d1-47b3-975c-e1045e89043d", contenttype:"BusinessService"});
+										dataElements.push({id:"111079ea-14d1-47b3-975c-e1045e89043d", type:"BusinessService", name:decodeURL("Desenvolver+Atividade+de+Projeto"), documentation:decodeURL("Dedicar-se+ao+desenvolvimento+de+atividades+relacionadas+ao+seu+projeto%2C+designadas+a+ele+pela+lideran%C3%A7a+do+projeto+em+reuni%C3%A3o.+O+membro+deve+ser+capaz+de+discenir+os+objetivos+da+atividade%2C+sua+capacidade+em+realiz%C3%A1-la+no+tempo+definido%2C+pedindo+aux%C3%ADlio+de+outros+membros+quando+algum+problema+%C3%A9+encontrado+ou+reportando+tal+problema+para+a+lideran%C3%A7a+do+projeto+ou+para+a+equipe+em+reuni%C3%A3o.+A+capacidade+de+trabalhar+em+equipe+%C3%A9+extremamente+bem+vista%2C+assim+como+a+independencia+de+a%C3%A7%C3%B5es+caso+a+tarefa+seja+atribuida+solo.")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"a4be371d-8ab2-44d4-89d2-eee19842a05d", contenttype:"BusinessService"});
+										dataElements.push({id:"a4be371d-8ab2-44d4-89d2-eee19842a05d", type:"BusinessService", name:decodeURL("Organizar+eventos"), documentation:decodeURL("A+principal+responsabilidade+da+equipe+de+comiss%C3%A3o+de+eventos+%C3%A9+organizar+eventos%2C+compreendendo+todos+os+sub-servi%C3%A7os+que+devem+ser+prestados+para+que+este+seja+prestado+da+forma+correta.+A+organiza%C3%A7%C3%A3o+de+eventos+%C3%A9+de+extrema+import%C3%A2ncia+para+a+equipe%2C+pois+%C3%A9+uma+das+formas+mais+eficazes+de+realizar+os+objetivos+de+extens%C3%A3o+do+laborat%C3%B3rio.")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"328c4f37-65a1-478a-bab3-effa5feecaea", contenttype:"BusinessService"});
+										dataElements.push({id:"328c4f37-65a1-478a-bab3-effa5feecaea", type:"BusinessService", name:decodeURL("Redigir+e+lan%C3%A7ar+edital"), documentation:decodeURL("Redigir+e+lan%C3%A7ar+edital+para+o+evento+%C3%A9+o+primeiro+passo+para+que+o+evento+ocorra.+O+edital+%C3%A9+o+documento+que+define+com+precis%C3%A3o+os+objetivos%2C+cronograma+e+espcificidades+do+evento.+Nele+temos+informa%C3%A7%C3%B5es+sobre+a+natureza+do+evento%2C+o+que+%C3%A9+necess%C3%A1rio+ou+poss%C3%ADvel+realizar+durante+o+evento%2C+assim+como+quando+e+onde+ele+ir%C3%A1+ocorrer.")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"0964ffc0-f00f-4c0a-8dac-e70137067b97", contenttype:"BusinessService"});
+										dataElements.push({id:"0964ffc0-f00f-4c0a-8dac-e70137067b97", type:"BusinessService", name:decodeURL("Manejar+e+promover+as+inscri%C3%A7%C3%B5es"), documentation:decodeURL("Manejar+e+promover+as+incri%C3%A7%C3%B5es+%C3%A9+um+servi%C3%A7o+que+diz+respeito+tanto+a+realizar+o+processo+de+inscri%C3%A7%C3%B5es%2C+escolhendo+plataforma+e+formato%2C+quanto+encorajar+o+p%C3%BAblico+a+faz%C3%AA-las%2C+retirar+d%C3%BAvidas+e+auxiliar+o+processo+de+inscri%C3%A7%C3%A3o+de+cada+participante.")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"8302732b-bacf-4690-b5ef-cb1a1b78b61c", contenttype:"BusinessService"});
+										dataElements.push({id:"8302732b-bacf-4690-b5ef-cb1a1b78b61c", type:"BusinessService", name:decodeURL("Organizar+e+cumprir+cronograma"), documentation:decodeURL("O+cronograma+de+realiza%C3%A7%C3%A3o+do+evento%2C+tanto+de+organiza%C3%A7%C3%A3o+quanto+de+acontecimentos+do+evento%2C+devem+ser+planejados+e+cumpridos+de+acordo.+Qualquer+modifica%C3%A7%C3%A3o+deve+ser+discutida%2C+documentada+e+prontamente+alertada+a+todos+que+ela+possa+envolver.")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"3341eb1b-08de-4ad9-b7f9-f2f12501993c", contenttype:"BusinessService"});
+										dataElements.push({id:"3341eb1b-08de-4ad9-b7f9-f2f12501993c", type:"BusinessService", name:decodeURL("Oferecer+suporte+aos+participantes"), documentation:decodeURL("O+suporte+aos+participantes+de+um+evento+%C3%A9+extremamente+importante.+%C3%89+necess%C3%A1rio+ter+prontid%C3%A3o+para+responder+quaisquer+d%C3%BAvidas+quanto+ao+envento+de+forma+educada+e+compreens%C3%ADvel.+Quaisquer+decis%C3%B5es+importantes+a+serem+levadas+quanto+aos+participantes+devem+ser+debatidas+e+concordadas+por+toda+equipe+e+nunca+devem+ser+tomadas+decis%C3%B5es+por+impulso.")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"81bde2ee-b36e-4ab5-8cf8-da05e46509f1", contenttype:"BusinessService"});
+										dataElements.push({id:"81bde2ee-b36e-4ab5-8cf8-da05e46509f1", type:"BusinessService", name:decodeURL("Apoiar+eventos"), documentation:decodeURL("O+apoio+a+eventos+de+outras+organiza%C3%A7%C3%B5es+%C3%A9+extremamente+importante+para+promover+a+equipe+e+a+rob%C3%B3tica+no+estado.+Apoiar+eventos+de+outras+organiza%C3%A7%C3%B5es+significa+estar+engajado+na+organiza%C3%A7%C3%A3o+e+acontecimento+deles%2C+promovendo+e+participando+deles%2C+al%C3%A9m+de+oferecendo+servi%C3%A7os+que+a+equipe+saiba+realizar+que+possam+ser+proveitosos+ao+evento.+As+parcerias+e+experi%C3%AAncias+que+obtemos+em+apoio+a+eventos+%C3%A9+de+extrema+import%C3%A2ncia+para+o+crescimento+da+equipe%2C+crescimento+pessoal+dos+envolvidos+e+da+rob%C3%B3tica+como+um+todo.")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"ecb80962-f09e-49ab-bd95-a1fa48915776", contenttype:"BusinessService"});
+										dataElements.push({id:"ecb80962-f09e-49ab-bd95-a1fa48915776", type:"BusinessService", name:decodeURL("Oferecer+e+recrutar+volunt%C3%A1rios"), documentation:decodeURL("Oferecer+e+recrutar+volunt%C3%A1rios+significa+tanto+disponibilizar+membros+da+equipe+para+ajudar+no+evento+quanto+realizar+esfor%C3%A7os+para+recrutar+outras+pessoas+para+os+trabalhos+volunt%C3%A1rios%2C+como+outros+alunos+e+professores+da+universidade+ou+colegas.")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"4c1f3df1-06b1-43da-a0e1-b127e0126731", contenttype:"BusinessService"});
+										dataElements.push({id:"4c1f3df1-06b1-43da-a0e1-b127e0126731", type:"BusinessService", name:decodeURL("Promover+o+evento"), documentation:decodeURL("A+promo%C3%A7%C3%A3o+de+eventos+de+organiza%C3%A7%C3%B5es+parceiras+fortalece+a+rela%C3%A7%C3%A3o+entre+a+equipe+e+a+organiza%C3%A7%C3%A3o%2C+al%C3%A9m+de+crescer+a+imagem+de+ambas.")});
+									dataFoldersContent.push({folderid:"ca7b55d8-aa90-471f-bc81-57b5b7c7b545", contentid:"77f5421c-ae34-4103-a5da-5d95d73effc2", contenttype:"BusinessService"});
+										dataElements.push({id:"77f5421c-ae34-4103-a5da-5d95d73effc2", type:"BusinessService", name:decodeURL("Oferecer+ajuda+na+organiza%C3%A7%C3%A3o"), documentation:decodeURL("Oferecer+ajuda+com+etapas+ou+at%C3%A9+com+todo+o+processo+de+organiza%C3%A7%C3%A3o%2C+estando+presente+e+de+prontid%C3%A3o+para+as+necessidades+da+equipe+de+organiza%C3%A7%C3%A3o+do+evento.")});
+
+								dataFoldersContent.push({folderid:"3ce84aeb-a7cd-4b3e-b8aa-0e81c67f1354", contentid:"846dc367-0d45-490d-9f1f-77251beab321", contenttype:"Folder"});
+								dataFolders.push({id:"846dc367-0d45-490d-9f1f-77251beab321", type:"Folder", name:decodeURL("Application"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"3ce84aeb-a7cd-4b3e-b8aa-0e81c67f1354", contentid:"ce401a3e-e8a8-4478-8944-5b22ecfce47d", contenttype:"Folder"});
+								dataFolders.push({id:"ce401a3e-e8a8-4478-8944-5b22ecfce47d", type:"Folder", name:decodeURL("Technology+%26+Physical"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"3ce84aeb-a7cd-4b3e-b8aa-0e81c67f1354", contentid:"5583c926-94e2-44b6-ad20-d5601c6cda49", contenttype:"Folder"});
+								dataFolders.push({id:"5583c926-94e2-44b6-ad20-d5601c6cda49", type:"Folder", name:decodeURL("Motivation"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"3ce84aeb-a7cd-4b3e-b8aa-0e81c67f1354", contentid:"716c9455-64dd-466c-af91-68ba9260aac7", contenttype:"Folder"});
+								dataFolders.push({id:"716c9455-64dd-466c-af91-68ba9260aac7", type:"Folder", name:decodeURL("Implementation+%26+Migration"), documentation:decodeURL("")});
+
+								dataFoldersContent.push({folderid:"3ce84aeb-a7cd-4b3e-b8aa-0e81c67f1354", contentid:"c6cbf455-4a79-4ec9-9c32-83c7fc9438a3", contenttype:"Folder"});
+								dataFolders.push({id:"c6cbf455-4a79-4ec9-9c32-83c7fc9438a3", type:"Folder", name:decodeURL("Other"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"c6cbf455-4a79-4ec9-9c32-83c7fc9438a3", contentid:"d2981f47-cf9a-4f76-b0da-8a785766c581", contenttype:"Location"});
+										dataElements.push({id:"d2981f47-cf9a-4f76-b0da-8a785766c581", type:"Location", name:decodeURL("Laborat%C3%B3rio+da+ERUS"), documentation:decodeURL("Laborat%C3%B3rio+localizado+na+Universidade+Federal+do+Espirito+Santo%2C+no+campus+Goiabeiras%2C+Vit%C3%B3ria%2C+ES.+Atualmente+se+encontra+no+pr%C3%A9dio+CT+XII+%28Departamento+de+Tecnologia+Industrial%29%2C+na+sala+103.+No+laborat%C3%B3rio+se+encontram+as+ferramentas+necess%C3%A1rias+para+o+desenvolvimento+das+atividades+da+equipe%2C+como+computadores+e+material+de+fabrica%C3%A7%C3%A3o+e+montagem+de+rob%C3%B4s%2C+sendo+tamb%C3%A9m+utilizado+como+sala+de+reuni%C3%B5es.")});
+
+								dataFoldersContent.push({folderid:"3ce84aeb-a7cd-4b3e-b8aa-0e81c67f1354", contentid:"4f14bc90-428c-48e5-b589-de80fe55af37", contenttype:"Folder"});
+								dataFolders.push({id:"4f14bc90-428c-48e5-b589-de80fe55af37", type:"Folder", name:decodeURL("Relations"), documentation:decodeURL("")});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"63b3d339-b5eb-4bd3-83f9-739433b263ec", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"63b3d339-b5eb-4bd3-83f9-739433b263ec", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"1a4843e0-de56-44b6-8406-becd175c2c2a", targetid:"24f64aff-ddac-44e2-997e-3b3e2ecead95"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"52260f10-899e-4a00-8920-6186d167d415", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"52260f10-899e-4a00-8920-6186d167d415", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"1a4843e0-de56-44b6-8406-becd175c2c2a", targetid:"8b47986b-cc0b-41a7-b290-53608a128c86"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"a1548a0e-6c42-462f-86e7-9e879eceb274", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"a1548a0e-6c42-462f-86e7-9e879eceb274", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"1a4843e0-de56-44b6-8406-becd175c2c2a", targetid:"7cae5c1c-3ddd-4c06-8f00-e80ec6312096"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"081a6064-32ea-4a33-87d4-ea62b467a5d1", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"081a6064-32ea-4a33-87d4-ea62b467a5d1", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"1a4843e0-de56-44b6-8406-becd175c2c2a", targetid:"15d7ce68-1c46-4d1b-bb53-ccb4629a6053"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"08ad9bc5-bd5e-4d6d-801c-ce5002b5a540", contenttype:"SpecializationRelationship"});
+										dataRelationships.push({id:"08ad9bc5-bd5e-4d6d-801c-ce5002b5a540", type:"SpecializationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"15d7ce68-1c46-4d1b-bb53-ccb4629a6053", targetid:"24f64aff-ddac-44e2-997e-3b3e2ecead95"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"6b5d89e1-ad6b-4bc7-acae-58ff94868494", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"6b5d89e1-ad6b-4bc7-acae-58ff94868494", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"1a4843e0-de56-44b6-8406-becd175c2c2a", targetid:"d24cdae3-af9d-4fc3-8835-faa0b728f892"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"eeb3b788-cd87-490c-a936-3032b3168c94", contenttype:"SpecializationRelationship"});
+										dataRelationships.push({id:"eeb3b788-cd87-490c-a936-3032b3168c94", type:"SpecializationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"d24cdae3-af9d-4fc3-8835-faa0b728f892", targetid:"24f64aff-ddac-44e2-997e-3b3e2ecead95"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"c54175e7-0714-4f18-93c5-a405b059aa96", contenttype:"SpecializationRelationship"});
+										dataRelationships.push({id:"c54175e7-0714-4f18-93c5-a405b059aa96", type:"SpecializationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"8b47986b-cc0b-41a7-b290-53608a128c86", targetid:"24f64aff-ddac-44e2-997e-3b3e2ecead95"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"2d647747-055d-45e5-b232-4107dc3b204d", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"2d647747-055d-45e5-b232-4107dc3b204d", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"1a4843e0-de56-44b6-8406-becd175c2c2a", targetid:"fc3f8301-d1e2-4749-bbf1-558341f2e04d"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"3bfce1e3-29ad-433b-bde3-37ff16549c2c", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"3bfce1e3-29ad-433b-bde3-37ff16549c2c", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"1a4843e0-de56-44b6-8406-becd175c2c2a", targetid:"2d99ff03-483e-4c58-a717-6f08952663fb"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"0193608e-ef71-4e96-b5fa-f6cf3b4eba4d", contenttype:"SpecializationRelationship"});
+										dataRelationships.push({id:"0193608e-ef71-4e96-b5fa-f6cf3b4eba4d", type:"SpecializationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"fc3f8301-d1e2-4749-bbf1-558341f2e04d", targetid:"24f64aff-ddac-44e2-997e-3b3e2ecead95"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"cbdb8cca-6310-439f-86a0-e0be32f2af44", contenttype:"SpecializationRelationship"});
+										dataRelationships.push({id:"cbdb8cca-6310-439f-86a0-e0be32f2af44", type:"SpecializationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"2d99ff03-483e-4c58-a717-6f08952663fb", targetid:"24f64aff-ddac-44e2-997e-3b3e2ecead95"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"c8b2907e-9a90-4b78-8f17-e08130e274fb", contenttype:"AssignmentRelationship"});
+										dataRelationships.push({id:"c8b2907e-9a90-4b78-8f17-e08130e274fb", type:"AssignmentRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"24f64aff-ddac-44e2-997e-3b3e2ecead95", targetid:"fc11f633-841d-4df2-a65e-8db7372b1c39"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"3fab9ee5-694f-4396-95b7-dca93dbe5375", contenttype:"AssignmentRelationship"});
+										dataRelationships.push({id:"3fab9ee5-694f-4396-95b7-dca93dbe5375", type:"AssignmentRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"24f64aff-ddac-44e2-997e-3b3e2ecead95", targetid:"0f3174e2-7fa6-4d3b-b5a1-0c82f131e5f6"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"f6c0e286-b881-46ca-9872-fe228fd5eb1a", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"f6c0e286-b881-46ca-9872-fe228fd5eb1a", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"1a4843e0-de56-44b6-8406-becd175c2c2a", targetid:"3f028515-569b-4ec5-899c-a109630903e1"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"1e81ff7d-d0a9-4320-bfef-9bccf6dccf71", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"1e81ff7d-d0a9-4320-bfef-9bccf6dccf71", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"1a4843e0-de56-44b6-8406-becd175c2c2a", targetid:"407de98e-7009-442d-810b-81da8879b35f"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"4767bdf0-bda3-4c12-9024-b899bf509d85", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"4767bdf0-bda3-4c12-9024-b899bf509d85", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"1a4843e0-de56-44b6-8406-becd175c2c2a", targetid:"c7768bda-38dd-413c-860b-2c3470d55948"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"7a068759-9b17-4426-9336-ec5a7f61b755", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"7a068759-9b17-4426-9336-ec5a7f61b755", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"1a4843e0-de56-44b6-8406-becd175c2c2a", targetid:"7faf7036-6384-4e48-aa34-386be77a7a71"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"277ad732-0787-49ae-84e8-fc0668e7e918", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"277ad732-0787-49ae-84e8-fc0668e7e918", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"1a4843e0-de56-44b6-8406-becd175c2c2a", targetid:"6944fbaa-7c9c-4fcc-ad00-8e59171696d8"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"be0601f6-f98d-4359-b626-455683f3866e", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"be0601f6-f98d-4359-b626-455683f3866e", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"1a4843e0-de56-44b6-8406-becd175c2c2a", targetid:"2fbfaa43-6239-40cd-a110-de6ea2568b17"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"fbf705f8-c32e-45e8-830f-23a96489cef5", contenttype:"SpecializationRelationship"});
+										dataRelationships.push({id:"fbf705f8-c32e-45e8-830f-23a96489cef5", type:"SpecializationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"3f028515-569b-4ec5-899c-a109630903e1", targetid:"d24cdae3-af9d-4fc3-8835-faa0b728f892"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"5bf9b11e-9ede-4716-ad0a-78d655f95045", contenttype:"SpecializationRelationship"});
+										dataRelationships.push({id:"5bf9b11e-9ede-4716-ad0a-78d655f95045", type:"SpecializationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"c7768bda-38dd-413c-860b-2c3470d55948", targetid:"d24cdae3-af9d-4fc3-8835-faa0b728f892"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"804bab21-3e10-4256-a004-25911596f89a", contenttype:"SpecializationRelationship"});
+										dataRelationships.push({id:"804bab21-3e10-4256-a004-25911596f89a", type:"SpecializationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"407de98e-7009-442d-810b-81da8879b35f", targetid:"d24cdae3-af9d-4fc3-8835-faa0b728f892"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"79f907a4-3d37-47d4-8042-a7b63f777386", contenttype:"SpecializationRelationship"});
+										dataRelationships.push({id:"79f907a4-3d37-47d4-8042-a7b63f777386", type:"SpecializationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"7faf7036-6384-4e48-aa34-386be77a7a71", targetid:"c7768bda-38dd-413c-860b-2c3470d55948"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"8ce5fe8f-c38c-4a4b-bee6-dfb06bfa9560", contenttype:"SpecializationRelationship"});
+										dataRelationships.push({id:"8ce5fe8f-c38c-4a4b-bee6-dfb06bfa9560", type:"SpecializationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"6944fbaa-7c9c-4fcc-ad00-8e59171696d8", targetid:"c7768bda-38dd-413c-860b-2c3470d55948"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"321e3841-ebb2-46db-9c67-7218c9af6e51", contenttype:"SpecializationRelationship"});
+										dataRelationships.push({id:"321e3841-ebb2-46db-9c67-7218c9af6e51", type:"SpecializationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"2fbfaa43-6239-40cd-a110-de6ea2568b17", targetid:"c7768bda-38dd-413c-860b-2c3470d55948"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"61e121c8-cf67-4920-b2b3-a99f70cb6524", contenttype:"AssignmentRelationship"});
+										dataRelationships.push({id:"61e121c8-cf67-4920-b2b3-a99f70cb6524", type:"AssignmentRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"24f64aff-ddac-44e2-997e-3b3e2ecead95", targetid:"06128c48-c9ed-4a4c-a352-507dd18a46c0"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"fc134bc1-19eb-4193-a280-659f83290979", contenttype:"AssignmentRelationship"});
+										dataRelationships.push({id:"fc134bc1-19eb-4193-a280-659f83290979", type:"AssignmentRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"7cae5c1c-3ddd-4c06-8f00-e80ec6312096", targetid:"56473f70-5fd5-4472-8447-65e5d5cac4da"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"fb5bee96-512c-4dfc-b9ff-ee004e58de67", contenttype:"AssignmentRelationship"});
+										dataRelationships.push({id:"fb5bee96-512c-4dfc-b9ff-ee004e58de67", type:"AssignmentRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"7cae5c1c-3ddd-4c06-8f00-e80ec6312096", targetid:"5b4a6e44-7845-4ac9-a073-75490ffaaa90"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"f3b56d8a-51eb-4c86-8486-93c8356d69d5", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"f3b56d8a-51eb-4c86-8486-93c8356d69d5", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"d2981f47-cf9a-4f76-b0da-8a785766c581", targetid:"1a4843e0-de56-44b6-8406-becd175c2c2a"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"d7af0309-a22c-4b61-b7f0-6c071ee6f15e", contenttype:"ServingRelationship"});
+										dataRelationships.push({id:"d7af0309-a22c-4b61-b7f0-6c071ee6f15e", type:"ServingRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"d6a706e2-bd6c-4541-964a-eb9b35c9a2c4", targetid:"56473f70-5fd5-4472-8447-65e5d5cac4da"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"48d86c52-e205-4f5a-8515-a35a0b370539", contenttype:"ServingRelationship"});
+										dataRelationships.push({id:"48d86c52-e205-4f5a-8515-a35a0b370539", type:"ServingRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"8d556e51-b501-41d6-b1d6-312d1fec3732", targetid:"56473f70-5fd5-4472-8447-65e5d5cac4da"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"a8866ff8-1ab3-4dd5-ad9c-4af801380214", contenttype:"SpecializationRelationship"});
+										dataRelationships.push({id:"a8866ff8-1ab3-4dd5-ad9c-4af801380214", type:"SpecializationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"16be25b9-210f-4b79-bef9-6b6f25b52666", targetid:"8d556e51-b501-41d6-b1d6-312d1fec3732"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"2604e720-ad49-467d-ad6d-ff6b13e11ef8", contenttype:"SpecializationRelationship"});
+										dataRelationships.push({id:"2604e720-ad49-467d-ad6d-ff6b13e11ef8", type:"SpecializationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"0616236c-4a3d-4b66-a821-a81963d553ea", targetid:"8d556e51-b501-41d6-b1d6-312d1fec3732"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"e5a8ce7c-7c0f-4df8-8b6e-f649a607740c", contenttype:"SpecializationRelationship"});
+										dataRelationships.push({id:"e5a8ce7c-7c0f-4df8-8b6e-f649a607740c", type:"SpecializationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"b0efcf40-1014-46b2-a853-012dcad10471", targetid:"8d556e51-b501-41d6-b1d6-312d1fec3732"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"6c62d920-4080-4c0d-982d-73c757c57cc7", contenttype:"SpecializationRelationship"});
+										dataRelationships.push({id:"6c62d920-4080-4c0d-982d-73c757c57cc7", type:"SpecializationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"4a542157-d43b-499b-871f-4782ebe5447d", targetid:"8d556e51-b501-41d6-b1d6-312d1fec3732"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"c70cf152-456a-4054-a450-f590a863d3bb", contenttype:"ServingRelationship"});
+										dataRelationships.push({id:"c70cf152-456a-4054-a450-f590a863d3bb", type:"ServingRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"eea945c5-8da2-4e2c-9e96-bb898e38730d", targetid:"56473f70-5fd5-4472-8447-65e5d5cac4da"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"51609a5c-d2d8-4c85-a0de-e663d79e9011", contenttype:"SpecializationRelationship"});
+										dataRelationships.push({id:"51609a5c-d2d8-4c85-a0de-e663d79e9011", type:"SpecializationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"69b902f6-7505-4041-9487-89ad18325fb7", targetid:"eea945c5-8da2-4e2c-9e96-bb898e38730d"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"4840898a-cde6-4d4d-a645-7ef9bf873d18", contenttype:"SpecializationRelationship"});
+										dataRelationships.push({id:"4840898a-cde6-4d4d-a645-7ef9bf873d18", type:"SpecializationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"80995fdb-57de-46e3-b700-9c9da9e9be79", targetid:"eea945c5-8da2-4e2c-9e96-bb898e38730d"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"7a39af58-dccf-4c72-9011-50e50b1497e2", contenttype:"ServingRelationship"});
+										dataRelationships.push({id:"7a39af58-dccf-4c72-9011-50e50b1497e2", type:"ServingRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"6470058a-6f1f-42f8-b9bb-1daa91523993", targetid:"56473f70-5fd5-4472-8447-65e5d5cac4da"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"316e467f-8cf5-429a-a0a8-933093246665", contenttype:"ServingRelationship"});
+										dataRelationships.push({id:"316e467f-8cf5-429a-a0a8-933093246665", type:"ServingRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"d0ed1a3c-a8d1-44f5-860f-75adb9eb382a", targetid:"56473f70-5fd5-4472-8447-65e5d5cac4da"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"8d79db58-9bb1-45ee-980f-f6b32ff9bd51", contenttype:"SpecializationRelationship"});
+										dataRelationships.push({id:"8d79db58-9bb1-45ee-980f-f6b32ff9bd51", type:"SpecializationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"f2383cf6-a939-4244-9503-8265788fee2d", targetid:"6470058a-6f1f-42f8-b9bb-1daa91523993"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"63a3e0c8-61d8-4a77-aff7-71f7252f5461", contenttype:"SpecializationRelationship"});
+										dataRelationships.push({id:"63a3e0c8-61d8-4a77-aff7-71f7252f5461", type:"SpecializationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"cc430cf0-861f-4003-837d-07a74ec287aa", targetid:"6470058a-6f1f-42f8-b9bb-1daa91523993"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"6e76d980-2fb3-44d5-b57d-40fdeab48a74", contenttype:"SpecializationRelationship"});
+										dataRelationships.push({id:"6e76d980-2fb3-44d5-b57d-40fdeab48a74", type:"SpecializationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"1839a87e-c894-4d66-a8fb-71a72aa9219f", targetid:"6470058a-6f1f-42f8-b9bb-1daa91523993"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"1b1d9793-aca9-4a92-b8af-1bb5c0dfa78f", contenttype:"SpecializationRelationship"});
+										dataRelationships.push({id:"1b1d9793-aca9-4a92-b8af-1bb5c0dfa78f", type:"SpecializationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"5088a766-a14a-4a85-90b5-5b78a24343c8", targetid:"d6a706e2-bd6c-4541-964a-eb9b35c9a2c4"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"a3fb021d-8ccc-4a73-bdc7-1f1363ad9d89", contenttype:"SpecializationRelationship"});
+										dataRelationships.push({id:"a3fb021d-8ccc-4a73-bdc7-1f1363ad9d89", type:"SpecializationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"78535caa-7aea-4ec3-8cd7-c9f963a1ded0", targetid:"d6a706e2-bd6c-4541-964a-eb9b35c9a2c4"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"a67e2b91-42ff-438c-bc1d-7534c838c90f", contenttype:"SpecializationRelationship"});
+										dataRelationships.push({id:"a67e2b91-42ff-438c-bc1d-7534c838c90f", type:"SpecializationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"712c555f-7dd4-4dec-b51b-1924fb5c92f8", targetid:"9a648016-532c-472c-92ee-b289971ad186"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"49bf55da-cc88-4056-8db4-135c9d76d86e", contenttype:"SpecializationRelationship"});
+										dataRelationships.push({id:"49bf55da-cc88-4056-8db4-135c9d76d86e", type:"SpecializationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"605f3af2-ee58-4694-8e79-40a96cecb978", targetid:"d5d6bf7e-a250-4293-84eb-fbe16a4033ae"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"e65ea121-f92c-4e4b-9d34-0db3c6799595", contenttype:"ServingRelationship"});
+										dataRelationships.push({id:"e65ea121-f92c-4e4b-9d34-0db3c6799595", type:"ServingRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"8d556e51-b501-41d6-b1d6-312d1fec3732", targetid:"5b4a6e44-7845-4ac9-a073-75490ffaaa90"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"0af14c9d-a7ba-49d7-9b98-9ac6737433ae", contenttype:"ServingRelationship"});
+										dataRelationships.push({id:"0af14c9d-a7ba-49d7-9b98-9ac6737433ae", type:"ServingRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"6470058a-6f1f-42f8-b9bb-1daa91523993", targetid:"5b4a6e44-7845-4ac9-a073-75490ffaaa90"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"eaf1ad14-dff2-433f-bfdd-740ef2f98686", contenttype:"ServingRelationship"});
+										dataRelationships.push({id:"eaf1ad14-dff2-433f-bfdd-740ef2f98686", type:"ServingRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"d5d6bf7e-a250-4293-84eb-fbe16a4033ae", targetid:"5b4a6e44-7845-4ac9-a073-75490ffaaa90"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"5b9006cd-ae4d-4f49-b69f-3ef9e58ac0e7", contenttype:"ServingRelationship"});
+										dataRelationships.push({id:"5b9006cd-ae4d-4f49-b69f-3ef9e58ac0e7", type:"ServingRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"9a648016-532c-472c-92ee-b289971ad186", targetid:"5b4a6e44-7845-4ac9-a073-75490ffaaa90"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"48f65c7c-95ad-4e26-9500-5e0c156935dd", contenttype:"ServingRelationship"});
+										dataRelationships.push({id:"48f65c7c-95ad-4e26-9500-5e0c156935dd", type:"ServingRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"712c555f-7dd4-4dec-b51b-1924fb5c92f8", targetid:"06128c48-c9ed-4a4c-a352-507dd18a46c0"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"97f4547e-0a83-4965-983c-bbcfbc341f61", contenttype:"ServingRelationship"});
+										dataRelationships.push({id:"97f4547e-0a83-4965-983c-bbcfbc341f61", type:"ServingRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"cc430cf0-861f-4003-837d-07a74ec287aa", targetid:"06128c48-c9ed-4a4c-a352-507dd18a46c0"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"21208494-9d42-43de-b967-766770e74659", contenttype:"ServingRelationship"});
+										dataRelationships.push({id:"21208494-9d42-43de-b967-766770e74659", type:"ServingRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"111079ea-14d1-47b3-975c-e1045e89043d", targetid:"06128c48-c9ed-4a4c-a352-507dd18a46c0"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"b9736883-cbbb-4f50-a2c6-4ffa25f6a86e", contenttype:"ServingRelationship"});
+										dataRelationships.push({id:"b9736883-cbbb-4f50-a2c6-4ffa25f6a86e", type:"ServingRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"a4be371d-8ab2-44d4-89d2-eee19842a05d", targetid:"8b47986b-cc0b-41a7-b290-53608a128c86"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"b9bf353c-ae75-4672-9785-d23cd6800de9", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"b9bf353c-ae75-4672-9785-d23cd6800de9", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"a4be371d-8ab2-44d4-89d2-eee19842a05d", targetid:"328c4f37-65a1-478a-bab3-effa5feecaea"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"7c7fbc30-d9d9-41ec-90e2-65b290893f86", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"7c7fbc30-d9d9-41ec-90e2-65b290893f86", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"a4be371d-8ab2-44d4-89d2-eee19842a05d", targetid:"0964ffc0-f00f-4c0a-8dac-e70137067b97"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"9d28f0d0-85c2-4e67-aa58-b7d6705e4ff0", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"9d28f0d0-85c2-4e67-aa58-b7d6705e4ff0", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"a4be371d-8ab2-44d4-89d2-eee19842a05d", targetid:"8302732b-bacf-4690-b5ef-cb1a1b78b61c"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"27091164-4026-442a-bd5a-4b2e0cab57fb", contenttype:"CompositionRelationship"});
+										dataRelationships.push({id:"27091164-4026-442a-bd5a-4b2e0cab57fb", type:"CompositionRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"a4be371d-8ab2-44d4-89d2-eee19842a05d", targetid:"3341eb1b-08de-4ad9-b7f9-f2f12501993c"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"0cfb20a2-e211-4a63-b268-7a8a988f5aff", contenttype:"ServingRelationship"});
+										dataRelationships.push({id:"0cfb20a2-e211-4a63-b268-7a8a988f5aff", type:"ServingRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"81bde2ee-b36e-4ab5-8cf8-da05e46509f1", targetid:"8b47986b-cc0b-41a7-b290-53608a128c86"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"441662ec-c153-496f-b2d7-96aacd187e32", contenttype:"SpecializationRelationship"});
+										dataRelationships.push({id:"441662ec-c153-496f-b2d7-96aacd187e32", type:"SpecializationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"ecb80962-f09e-49ab-bd95-a1fa48915776", targetid:"81bde2ee-b36e-4ab5-8cf8-da05e46509f1"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"dea35adf-9810-43a3-838d-bebae85e351c", contenttype:"SpecializationRelationship"});
+										dataRelationships.push({id:"dea35adf-9810-43a3-838d-bebae85e351c", type:"SpecializationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"4c1f3df1-06b1-43da-a0e1-b127e0126731", targetid:"81bde2ee-b36e-4ab5-8cf8-da05e46509f1"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"3d81e090-02c4-4a85-b2a9-be0eb474891c", contenttype:"SpecializationRelationship"});
+										dataRelationships.push({id:"3d81e090-02c4-4a85-b2a9-be0eb474891c", type:"SpecializationRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"77f5421c-ae34-4103-a5da-5d95d73effc2", targetid:"81bde2ee-b36e-4ab5-8cf8-da05e46509f1"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"0137cbff-16e5-4d55-83fc-98964460572c", contenttype:"ServingRelationship"});
+										dataRelationships.push({id:"0137cbff-16e5-4d55-83fc-98964460572c", type:"ServingRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"80995fdb-57de-46e3-b700-9c9da9e9be79", targetid:"8b47986b-cc0b-41a7-b290-53608a128c86"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"834466cd-5ac1-437f-8118-50c06f84a7ee", contenttype:"ServingRelationship"});
+										dataRelationships.push({id:"834466cd-5ac1-437f-8118-50c06f84a7ee", type:"ServingRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"6470058a-6f1f-42f8-b9bb-1daa91523993", targetid:"7cae5c1c-3ddd-4c06-8f00-e80ec6312096"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"b21e76aa-bf12-4972-84da-d7891f0b5fab", contenttype:"ServingRelationship"});
+										dataRelationships.push({id:"b21e76aa-bf12-4972-84da-d7891f0b5fab", type:"ServingRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"8d556e51-b501-41d6-b1d6-312d1fec3732", targetid:"7cae5c1c-3ddd-4c06-8f00-e80ec6312096"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"8b80c907-6442-439a-b6cb-cdc347189b36", contenttype:"ServingRelationship"});
+										dataRelationships.push({id:"8b80c907-6442-439a-b6cb-cdc347189b36", type:"ServingRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"d5d6bf7e-a250-4293-84eb-fbe16a4033ae", targetid:"7cae5c1c-3ddd-4c06-8f00-e80ec6312096"});
+									dataFoldersContent.push({folderid:"4f14bc90-428c-48e5-b589-de80fe55af37", contentid:"4e9df9b2-86c0-4c71-99c0-55603e458ded", contenttype:"ServingRelationship"});
+										dataRelationships.push({id:"4e9df9b2-86c0-4c71-99c0-55603e458ded", type:"ServingRelationship", name:decodeURL(""), documentation:decodeURL(""), sourceid:"d6a706e2-bd6c-4541-964a-eb9b35c9a2c4", targetid:"7cae5c1c-3ddd-4c06-8f00-e80ec6312096"});
+
+								dataFoldersContent.push({folderid:"3ce84aeb-a7cd-4b3e-b8aa-0e81c67f1354", contentid:"79e1c330-1db5-490f-a624-fedc06ea99ed", contenttype:"Folder"});
+								dataFolders.push({id:"79e1c330-1db5-490f-a624-fedc06ea99ed", type:"Folder", name:decodeURL("Views"), documentation:decodeURL("Atividades+e+responsabilidades+da+Equipe+Administrativa.")});
+									dataFoldersContent.push({folderid:"79e1c330-1db5-490f-a624-fedc06ea99ed", contentid:"8e26704b-65b0-492e-850c-61cc25da89e9", contenttype:"Folder"});
+									dataFolders.push({id:"8e26704b-65b0-492e-850c-61cc25da89e9", type:"Folder", name:decodeURL("Organograma"), documentation:decodeURL("Pasta+com+diagramas+sobre+a+organiza%C3%A7%C3%A3o+dos+membros+da+equipe.")});
+										dataFoldersContent.push({folderid:"8e26704b-65b0-492e-850c-61cc25da89e9", contentid:"53019553-2976-44de-9b76-83c5e1c5c292", contenttype:"Folder"});
+										dataFolders.push({id:"53019553-2976-44de-9b76-83c5e1c5c292", type:"Folder", name:decodeURL("Responsabilidades+da+equipe"), documentation:decodeURL("Pasta+com+diagramas+sobre+responsabilidades+de+membros+da+equipe.")});
+											dataFoldersContent.push({folderid:"53019553-2976-44de-9b76-83c5e1c5c292", contentid:"d7f4bdde-0cf4-4421-ba41-e235c0478358", contenttype:"Folder"});
+											dataFolders.push({id:"d7f4bdde-0cf4-4421-ba41-e235c0478358", type:"Folder", name:decodeURL("Responsabilidades+de+equipe+de+projeto+de+extens%C3%A3o"), documentation:decodeURL("Pasta+com+diagramas+de+responsabilidades+relacionadas+a+equipes+de+projeto+de+extens%C3%A3o.")});
+												dataFoldersContent.push({folderid:"d7f4bdde-0cf4-4421-ba41-e235c0478358", contentid:"8e6bd560-e060-4dc7-b169-6988326e624a", contenttype:"Folder"});
+												dataFolders.push({id:"8e6bd560-e060-4dc7-b169-6988326e624a", type:"Folder", name:decodeURL("Responsabilidades+de+membros+de+equipe+de+projetos+de+extens%C3%A3o"), documentation:decodeURL("Pasta+com+diagramas+de+responsabilidades+relacionadas+a+membros+de+equipes+de+projeto+de+extens%C3%A3o.")});
+													dataFoldersContent.push({folderid:"8e6bd560-e060-4dc7-b169-6988326e624a", contentid:"74b499f1-56b2-483d-9e3b-e2f601b3183c", contenttype:"ArchimateDiagramModel"});
+														dataViews.push({id:"74b499f1-56b2-483d-9e3b-e2f601b3183c", type:"ArchimateDiagramModel", name:decodeURL("Responsabilidades+de+l%C3%ADder+de+projeto+de+extens%C3%A3o"), documentation:decodeURL("Este+diagrama+apresenta+as+principais+atividades+e+responsabilidades+do+l%C3%ADder+de+projeto+de+extens%C3%A3o.+Neste+diagrama%2C+s%C3%A3o+listadas+as+principais+dificuldades+e+necessidades%2C+dos+membros+de+projeto+de+extens%C3%A3o%2C+em+quest%C3%A3o+de+planejamento%2C+gest%C3%A3o+e+organiza%C3%A7%C3%A3o%2C+e+al%C3%A9m+das+suas+ideias+de+responsabilidades+e+postura+do+l%C3%ADder+do+projeto.")});
+																dataViewsContent.push({viewid:"74b499f1-56b2-483d-9e3b-e2f601b3183c", contentid:"77d7464e-13b7-4c55-91da-a3b696f287a6", contenttype:"DiagramModelArchimateObject"});
+
+													dataFoldersContent.push({folderid:"8e6bd560-e060-4dc7-b169-6988326e624a", contentid:"9662dedb-a7c0-4fd9-aef4-b93e37d2f322", contenttype:"ArchimateDiagramModel"});
+														dataViews.push({id:"9662dedb-a7c0-4fd9-aef4-b93e37d2f322", type:"ArchimateDiagramModel", name:decodeURL("Responsabilidades+de+membro+de+projeto+de+extens%C3%A3o"), documentation:decodeURL("Este+diagrama+apresenta+as+principais+atividades+e+responsabilidades+de+membro+de+projeto+de+extens%C3%A3o.+Neste+diagrama%2C+s%C3%A3o+listadas+as+principais+necessidades%2C+dos+membros+de+projeto+de+extens%C3%A3o%2C+em+quest%C3%A3o+de+desenvolvimento+do+projeto%2C+e+al%C3%A9m+das+suas+ideias+de+responsabilidades+e+postura+do+l%C3%ADder+de+membros.+Com+isso%2C+o+projeto+se+desenvolve+a+partir+da+colabora%C3%A7%C3%A3o+de+todos+os+membros+em+realizar+tais+responsabilidades+e+manter+a+postura+adequada.")});
+																dataViewsContent.push({viewid:"9662dedb-a7c0-4fd9-aef4-b93e37d2f322", contentid:"6133c66e-86a0-4303-91c3-20b3fbede943", contenttype:"DiagramModelArchimateObject"});
+																dataViewsContent.push({viewid:"9662dedb-a7c0-4fd9-aef4-b93e37d2f322", contentid:"d191b999-cd0f-449a-bc57-1f4aee8273a8", contenttype:"DiagramModelArchimateObject"});
+																dataViewsContent.push({viewid:"9662dedb-a7c0-4fd9-aef4-b93e37d2f322", contentid:"61a19781-3ff6-4994-93c3-2e16276f2183", contenttype:"DiagramModelArchimateObject"});
+																dataViewsContent.push({viewid:"9662dedb-a7c0-4fd9-aef4-b93e37d2f322", contentid:"f8177f3e-b436-44ae-b6e4-f0fa791bde98", contenttype:"DiagramModelArchimateObject"});
+
+																						dataViewsContent.push({viewid:"9662dedb-a7c0-4fd9-aef4-b93e37d2f322", contentid:"ae8cc127-d041-4aa8-9eac-f71c407464b9", contenttype:"DiagramModelArchimateConnection"});
+
+																						dataViewsContent.push({viewid:"9662dedb-a7c0-4fd9-aef4-b93e37d2f322", contentid:"66083c8f-1116-46c9-a710-c0c6ac3e3f9b", contenttype:"DiagramModelArchimateConnection"});
+
+																						dataViewsContent.push({viewid:"9662dedb-a7c0-4fd9-aef4-b93e37d2f322", contentid:"1da5132d-31e6-405c-8825-32172d333ff3", contenttype:"DiagramModelArchimateConnection"});
+
+
+													dataFoldersContent.push({folderid:"8e6bd560-e060-4dc7-b169-6988326e624a", contentid:"e90a06ce-119e-412d-b1f2-2fb7c03109be", contenttype:"ArchimateDiagramModel"});
+														dataViews.push({id:"e90a06ce-119e-412d-b1f2-2fb7c03109be", type:"ArchimateDiagramModel", name:decodeURL("Responsabilidades+de+vice-l%C3%ADder+de+projeto+de+Extens%C3%A3o"), documentation:decodeURL("Este+diagrama+apresenta+as+principais+atividades+e+responsabilidades+do+vice-l%C3%ADder+de+projeto+de+extens%C3%A3o.+Neste+diagrama%2C+s%C3%A3o+listadas+as+principais+dificuldades+e+necessidades%2C+dos+membros+de+projeto+de+extens%C3%A3o%2C+em+quest%C3%A3o+de+planejamento%2C+gest%C3%A3o+e+organiza%C3%A7%C3%A3o%2C+e+al%C3%A9m+das+suas+ideias+de+responsabilidades+e+postura+do+vice-l%C3%ADder+do+projeto.")});
+																dataViewsContent.push({viewid:"e90a06ce-119e-412d-b1f2-2fb7c03109be", contentid:"d913fc55-066b-4d16-8471-3bfb606e5e35", contenttype:"DiagramModelArchimateObject"});
+
+
+
+												dataFoldersContent.push({folderid:"d7f4bdde-0cf4-4421-ba41-e235c0478358", contentid:"f559f4dc-6838-4622-a1f1-40195e109460", contenttype:"ArchimateDiagramModel"});
+													dataViews.push({id:"f559f4dc-6838-4622-a1f1-40195e109460", type:"ArchimateDiagramModel", name:decodeURL("Responsabilidades+da+equipe+de+marketing"), documentation:decodeURL("")});
+															dataViewsContent.push({viewid:"f559f4dc-6838-4622-a1f1-40195e109460", contentid:"96f439ab-44ae-42a2-aca3-3246acef2fd2", contenttype:"DiagramModelArchimateObject"});
+
+												dataFoldersContent.push({folderid:"d7f4bdde-0cf4-4421-ba41-e235c0478358", contentid:"a67420c6-5dde-4100-b00a-68738f6f2fb8", contenttype:"ArchimateDiagramModel"});
+													dataViews.push({id:"a67420c6-5dde-4100-b00a-68738f6f2fb8", type:"ArchimateDiagramModel", name:decodeURL("Responsabilidades+da+equipe+de+apresenta%C3%A7%C3%B5es"), documentation:decodeURL("")});
+															dataViewsContent.push({viewid:"a67420c6-5dde-4100-b00a-68738f6f2fb8", contentid:"cff6e291-80db-4f68-8c68-692f8946869d", contenttype:"DiagramModelArchimateObject"});
+
+												dataFoldersContent.push({folderid:"d7f4bdde-0cf4-4421-ba41-e235c0478358", contentid:"98f8fbe8-f06b-4bf0-b3d4-5754c7410e68", contenttype:"ArchimateDiagramModel"});
+													dataViews.push({id:"98f8fbe8-f06b-4bf0-b3d4-5754c7410e68", type:"ArchimateDiagramModel", name:decodeURL("Responsabilidades+da+equipe+de+ensino"), documentation:decodeURL("")});
+															dataViewsContent.push({viewid:"98f8fbe8-f06b-4bf0-b3d4-5754c7410e68", contentid:"60be6e5d-c83c-4987-910b-a4333709ec95", contenttype:"DiagramModelArchimateObject"});
+
+												dataFoldersContent.push({folderid:"d7f4bdde-0cf4-4421-ba41-e235c0478358", contentid:"d14d08d0-b36e-49df-8ea0-8007a0d571b1", contenttype:"ArchimateDiagramModel"});
+													dataViews.push({id:"d14d08d0-b36e-49df-8ea0-8007a0d571b1", type:"ArchimateDiagramModel", name:decodeURL("Responsabilidades+de+equipes+competitivas"), documentation:decodeURL("")});
+															dataViewsContent.push({viewid:"d14d08d0-b36e-49df-8ea0-8007a0d571b1", contentid:"f08b6df2-5379-45ca-9307-26c855811701", contenttype:"DiagramModelArchimateObject"});
+
+												dataFoldersContent.push({folderid:"d7f4bdde-0cf4-4421-ba41-e235c0478358", contentid:"40486e94-2c59-4252-8b7b-225a026de433", contenttype:"ArchimateDiagramModel"});
+													dataViews.push({id:"40486e94-2c59-4252-8b7b-225a026de433", type:"ArchimateDiagramModel", name:decodeURL("Responsabilidades+da+equipe+da+comiss%C3%A3o+de+eventos"), documentation:decodeURL("Este+diagrama+apresenta+as+principais+atividades+e+responsabilidades+da+equipe+de+comiss%C3%A3o+de+eventos.+Eventos+de+extes%C3%A3o+organizados%2C+apoiados+e+realizados+pela+equipe+possuem+um+impacto+muito+positivo+na+sociedade%2C+promovento+oportunidades+do+p%C3%BAblico+interagir+com+a+equipe+e+com+as+%C3%A1reas+de+tecnologia+que+contemplam+a+rob%C3%B3tica.+A+equipe+da+comiss%C3%A3o+de+eventos+deve+sempre+estar+atenta+a+eventos+na+%C3%A1rea+de+rob%C3%B3tica+para+entrar+com+apoio+e+m%C3%A3o-de-obra+organizadora+e+realizadora+em+todos+os+eventos+que+puder%2C+al%C3%A9m+de+promover+os+pr%C3%B3prios+eventos+da+equipe%2C+como+o+TRUFES+-+Torneio+de+Rob%C3%B3tica+da+UFES.")});
+															dataViewsContent.push({viewid:"40486e94-2c59-4252-8b7b-225a026de433", contentid:"6089a24a-43bf-425b-ba66-ce83e7871296", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"40486e94-2c59-4252-8b7b-225a026de433", contentid:"ba524626-2c80-4769-899f-c1f9f7b7defa", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"40486e94-2c59-4252-8b7b-225a026de433", contentid:"0ea91abc-039d-48ce-8e87-7483e670a7e2", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"40486e94-2c59-4252-8b7b-225a026de433", contentid:"70b42d70-8183-49a8-8b96-9abd271d5bc0", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"40486e94-2c59-4252-8b7b-225a026de433", contentid:"f666a535-efe3-41d4-bad7-d10074e784ce", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"40486e94-2c59-4252-8b7b-225a026de433", contentid:"aad3625e-300f-4bc0-b47f-86671f049ed6", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"40486e94-2c59-4252-8b7b-225a026de433", contentid:"c49161b9-e31e-4f03-b242-3f65c0132b47", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"40486e94-2c59-4252-8b7b-225a026de433", contentid:"a3087afa-a0e7-4a5f-ba6c-b6fc96f9bdc9", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"40486e94-2c59-4252-8b7b-225a026de433", contentid:"e935f7df-aa85-458d-adf4-110d4cec07a3", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"40486e94-2c59-4252-8b7b-225a026de433", contentid:"024e85a9-f3d8-4c9c-89b7-5f42b8063efb", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"40486e94-2c59-4252-8b7b-225a026de433", contentid:"1c210e12-43de-4696-8915-db5761d8e914", contenttype:"DiagramModelArchimateObject"});
+
+																					dataViewsContent.push({viewid:"40486e94-2c59-4252-8b7b-225a026de433", contentid:"3dc81be6-21f0-4e10-b925-6f506fa10654", contenttype:"DiagramModelArchimateConnection"});
+																					dataViewsContent.push({viewid:"40486e94-2c59-4252-8b7b-225a026de433", contentid:"5d550bfd-f3d8-4ba0-9b5b-821b764d985b", contenttype:"DiagramModelArchimateConnection"});
+																					dataViewsContent.push({viewid:"40486e94-2c59-4252-8b7b-225a026de433", contentid:"8e1fa64e-c806-4ca3-aa6c-8099426a7563", contenttype:"DiagramModelArchimateConnection"});
+																					dataViewsContent.push({viewid:"40486e94-2c59-4252-8b7b-225a026de433", contentid:"33105eec-25ca-452c-8674-2bc47983a3ba", contenttype:"DiagramModelArchimateConnection"});
+																					dataViewsContent.push({viewid:"40486e94-2c59-4252-8b7b-225a026de433", contentid:"7d199632-db49-48cd-a9bf-de0fa96ed8ce", contenttype:"DiagramModelArchimateConnection"});
+
+																					dataViewsContent.push({viewid:"40486e94-2c59-4252-8b7b-225a026de433", contentid:"0d70ec21-263f-41f1-bdeb-23f06bc7ab70", contenttype:"DiagramModelArchimateConnection"});
+
+																					dataViewsContent.push({viewid:"40486e94-2c59-4252-8b7b-225a026de433", contentid:"2d0392f8-b3e0-4510-996e-0bce299545c6", contenttype:"DiagramModelArchimateConnection"});
+
+																					dataViewsContent.push({viewid:"40486e94-2c59-4252-8b7b-225a026de433", contentid:"13d17224-d828-4bec-9fed-145bb9697ed7", contenttype:"DiagramModelArchimateConnection"});
+
+																					dataViewsContent.push({viewid:"40486e94-2c59-4252-8b7b-225a026de433", contentid:"a9713c66-3cf2-446d-8216-1790ea7ddd9f", contenttype:"DiagramModelArchimateConnection"});
+
+																					dataViewsContent.push({viewid:"40486e94-2c59-4252-8b7b-225a026de433", contentid:"340346f3-b9cb-4e11-8f00-5b4b99118da9", contenttype:"DiagramModelArchimateConnection"});
+
+
+
+											dataFoldersContent.push({folderid:"53019553-2976-44de-9b76-83c5e1c5c292", contentid:"8225da6c-2ad9-4a13-a8d0-d7c117052cbc", contenttype:"Folder"});
+											dataFolders.push({id:"8225da6c-2ad9-4a13-a8d0-d7c117052cbc", type:"Folder", name:decodeURL("Responsabilidades+da+equipe+administrativa"), documentation:decodeURL("Pasta+com+diagramas+de+responsabilidades+relacionadas+a+equipe+adiministrativa.")});
+												dataFoldersContent.push({folderid:"8225da6c-2ad9-4a13-a8d0-d7c117052cbc", contentid:"81a59bcd-1802-4bf1-93d9-73f9c048dcd0", contenttype:"Folder"});
+												dataFolders.push({id:"81a59bcd-1802-4bf1-93d9-73f9c048dcd0", type:"Folder", name:decodeURL("Responsabilidades+de+membros+da+equipe+administrativa"), documentation:decodeURL("")});
+													dataFoldersContent.push({folderid:"81a59bcd-1802-4bf1-93d9-73f9c048dcd0", contentid:"93a55796-43a9-4f75-bfce-eb5b91175728", contenttype:"ArchimateDiagramModel"});
+														dataViews.push({id:"93a55796-43a9-4f75-bfce-eb5b91175728", type:"ArchimateDiagramModel", name:decodeURL("Responsabilidades+de+membro+de+adminstra%C3%A7%C3%A3o"), documentation:decodeURL("Este+diagrama+apresenta+as+principais+atividades+e+responsabilidades+de+membro+de+administra%C3%A7%C3%A3o.+Neste+diagrama%2C+s%C3%A3o+listadas+as+principais+dificuldades+e+necessidades%2C+dos+membros+da+equipe%2C+em+quest%C3%A3o+de+planejamento%2C+gest%C3%A3o+e+organiza%C3%A7%C3%A3o%2C+e+al%C3%A9m+das+suas+ideias+de+responsabilidades+e+postura+de+membro+de+administra%C3%A7%C3%A3o.")});
+																dataViewsContent.push({viewid:"93a55796-43a9-4f75-bfce-eb5b91175728", contentid:"15183547-d89b-4677-9036-59569e739791", contenttype:"DiagramModelArchimateObject"});
+																dataViewsContent.push({viewid:"93a55796-43a9-4f75-bfce-eb5b91175728", contentid:"f147df3f-a30d-44ec-96e6-c3518b2cf95a", contenttype:"DiagramModelArchimateObject"});
+																dataViewsContent.push({viewid:"93a55796-43a9-4f75-bfce-eb5b91175728", contentid:"b3e035a6-6391-422b-9899-2bfbc31d9c4d", contenttype:"DiagramModelArchimateObject"});
+																dataViewsContent.push({viewid:"93a55796-43a9-4f75-bfce-eb5b91175728", contentid:"754ff84a-50e9-4d85-9898-8188eae261ec", contenttype:"DiagramModelArchimateObject"});
+																dataViewsContent.push({viewid:"93a55796-43a9-4f75-bfce-eb5b91175728", contentid:"db78f462-d86f-4fbf-af81-48d8cd285e5c", contenttype:"DiagramModelArchimateObject"});
+																dataViewsContent.push({viewid:"93a55796-43a9-4f75-bfce-eb5b91175728", contentid:"fe4eb0a6-8be5-489b-b524-6968cc23535c", contenttype:"DiagramModelArchimateObject"});
+																dataViewsContent.push({viewid:"93a55796-43a9-4f75-bfce-eb5b91175728", contentid:"f36e8aae-4639-4766-b303-684d9e499ee3", contenttype:"DiagramModelArchimateObject"});
+																dataViewsContent.push({viewid:"93a55796-43a9-4f75-bfce-eb5b91175728", contentid:"088db01d-bab0-4035-83eb-0519ee0cbc02", contenttype:"DiagramModelArchimateObject"});
+																dataViewsContent.push({viewid:"93a55796-43a9-4f75-bfce-eb5b91175728", contentid:"66545473-e33d-4a53-a50d-fd530b38753b", contenttype:"DiagramModelArchimateObject"});
+
+																						dataViewsContent.push({viewid:"93a55796-43a9-4f75-bfce-eb5b91175728", contentid:"9ad2a328-75af-4302-b8e8-5918ba456aaf", contenttype:"DiagramModelArchimateConnection"});
+
+																						dataViewsContent.push({viewid:"93a55796-43a9-4f75-bfce-eb5b91175728", contentid:"aa4d9fdd-ce7d-4cf8-8717-37c01e999480", contenttype:"DiagramModelArchimateConnection"});
+
+																						dataViewsContent.push({viewid:"93a55796-43a9-4f75-bfce-eb5b91175728", contentid:"29225474-f9c5-4aaf-acd3-4ce83a4e4e09", contenttype:"DiagramModelArchimateConnection"});
+
+																						dataViewsContent.push({viewid:"93a55796-43a9-4f75-bfce-eb5b91175728", contentid:"5ffa9bc9-83da-44a5-9278-45e28773983f", contenttype:"DiagramModelArchimateConnection"});
+
+																						dataViewsContent.push({viewid:"93a55796-43a9-4f75-bfce-eb5b91175728", contentid:"988ca433-0ac2-43b0-bbd7-e37e209a17f3", contenttype:"DiagramModelArchimateConnection"});
+
+																						dataViewsContent.push({viewid:"93a55796-43a9-4f75-bfce-eb5b91175728", contentid:"159a0502-63aa-45ec-848c-a51bda53115c", contenttype:"DiagramModelArchimateConnection"});
+
+																						dataViewsContent.push({viewid:"93a55796-43a9-4f75-bfce-eb5b91175728", contentid:"71d7495d-75ac-47ad-a5ca-210aab685e93", contenttype:"DiagramModelArchimateConnection"});
+
+																						dataViewsContent.push({viewid:"93a55796-43a9-4f75-bfce-eb5b91175728", contentid:"e17e76bc-2ddf-4211-8e91-63fe94fe74a7", contenttype:"DiagramModelArchimateConnection"});
+
+
+													dataFoldersContent.push({folderid:"81a59bcd-1802-4bf1-93d9-73f9c048dcd0", contentid:"8645d76c-ab2e-4b3a-9028-a1c2cc51679c", contenttype:"ArchimateDiagramModel"});
+														dataViews.push({id:"8645d76c-ab2e-4b3a-9028-a1c2cc51679c", type:"ArchimateDiagramModel", name:decodeURL("Responsabilidades+do+coordenador"), documentation:decodeURL("Este+diagrama+apresenta+as+principais+atividades+e+responsabilidades+do+coordenador+da+equipe.+Neste+diagrama%2C+s%C3%A3o+listadas+as+principais+dificuldades+e+necessidades%2C+dos+alunos%2C+em+quest%C3%A3o+de+planejamento%2C+gest%C3%A3o%2C+burocracia+e+organiza%C3%A7%C3%A3o%2C+e+al%C3%A9m+das+suas+ideias+de+responsabilidades+e+postura+do+coordenador.")});
+																dataViewsContent.push({viewid:"8645d76c-ab2e-4b3a-9028-a1c2cc51679c", contentid:"cff11509-7822-4bb9-8601-84d28bb5e565", contenttype:"DiagramModelArchimateObject"});
+																dataViewsContent.push({viewid:"8645d76c-ab2e-4b3a-9028-a1c2cc51679c", contentid:"e970fb3e-0087-4610-8bf4-935f071eba74", contenttype:"DiagramModelArchimateObject"});
+																dataViewsContent.push({viewid:"8645d76c-ab2e-4b3a-9028-a1c2cc51679c", contentid:"a47e17ef-0c14-4e41-8954-52d28bfc7577", contenttype:"DiagramModelArchimateObject"});
+																dataViewsContent.push({viewid:"8645d76c-ab2e-4b3a-9028-a1c2cc51679c", contentid:"dc87e24c-a34b-4100-9af4-d773f3e8a670", contenttype:"DiagramModelArchimateObject"});
+																dataViewsContent.push({viewid:"8645d76c-ab2e-4b3a-9028-a1c2cc51679c", contentid:"64a1830a-6b4d-4ccc-9c9a-3cf18dd266f6", contenttype:"DiagramModelArchimateObject"});
+																dataViewsContent.push({viewid:"8645d76c-ab2e-4b3a-9028-a1c2cc51679c", contentid:"02671d23-05f9-4811-b0fa-87845f90e7b7", contenttype:"DiagramModelArchimateObject"});
+																dataViewsContent.push({viewid:"8645d76c-ab2e-4b3a-9028-a1c2cc51679c", contentid:"fad3f5ed-97a4-448f-90c1-f530e081d69f", contenttype:"DiagramModelArchimateObject"});
+																dataViewsContent.push({viewid:"8645d76c-ab2e-4b3a-9028-a1c2cc51679c", contentid:"76e73a91-f1f4-4691-8c33-6c3558985067", contenttype:"DiagramModelArchimateObject"});
+																dataViewsContent.push({viewid:"8645d76c-ab2e-4b3a-9028-a1c2cc51679c", contentid:"85b50506-b619-41f2-b0cb-92de84d77ad9", contenttype:"DiagramModelArchimateObject"});
+																dataViewsContent.push({viewid:"8645d76c-ab2e-4b3a-9028-a1c2cc51679c", contentid:"9fa2c9da-0c32-44f1-b92f-477d668f32d1", contenttype:"DiagramModelArchimateObject"});
+																dataViewsContent.push({viewid:"8645d76c-ab2e-4b3a-9028-a1c2cc51679c", contentid:"f34b549e-bc69-4c65-8b04-3e9d0e3f20d7", contenttype:"DiagramModelArchimateObject"});
+																dataViewsContent.push({viewid:"8645d76c-ab2e-4b3a-9028-a1c2cc51679c", contentid:"85f5e047-ebf7-4d64-890b-193be69a8a97", contenttype:"DiagramModelArchimateObject"});
+																dataViewsContent.push({viewid:"8645d76c-ab2e-4b3a-9028-a1c2cc51679c", contentid:"31fe1f11-0085-4329-92df-8f31c743931f", contenttype:"DiagramModelArchimateObject"});
+																dataViewsContent.push({viewid:"8645d76c-ab2e-4b3a-9028-a1c2cc51679c", contentid:"97581ae6-5fe6-45b2-8a72-e3f4b785f954", contenttype:"DiagramModelArchimateObject"});
+																dataViewsContent.push({viewid:"8645d76c-ab2e-4b3a-9028-a1c2cc51679c", contentid:"7ad1e2ad-f3ae-4d10-9ed2-fcf2e556e388", contenttype:"DiagramModelArchimateObject"});
+																dataViewsContent.push({viewid:"8645d76c-ab2e-4b3a-9028-a1c2cc51679c", contentid:"0834685f-406e-494e-be13-ba771563485e", contenttype:"DiagramModelArchimateObject"});
+																dataViewsContent.push({viewid:"8645d76c-ab2e-4b3a-9028-a1c2cc51679c", contentid:"d9df79e4-6715-4dae-b349-88a7ad28578c", contenttype:"DiagramModelArchimateObject"});
+
+																						dataViewsContent.push({viewid:"8645d76c-ab2e-4b3a-9028-a1c2cc51679c", contentid:"306d0c6a-b428-4220-8f08-028c44f981a6", contenttype:"DiagramModelArchimateConnection"});
+
+																						dataViewsContent.push({viewid:"8645d76c-ab2e-4b3a-9028-a1c2cc51679c", contentid:"908be1f6-7a82-4d8a-8c1f-df0e37cc07ff", contenttype:"DiagramModelArchimateConnection"});
+
+																						dataViewsContent.push({viewid:"8645d76c-ab2e-4b3a-9028-a1c2cc51679c", contentid:"fb7dad46-7698-4e37-a1bc-df8eca43ca43", contenttype:"DiagramModelArchimateConnection"});
+
+																						dataViewsContent.push({viewid:"8645d76c-ab2e-4b3a-9028-a1c2cc51679c", contentid:"3b9be3b1-6321-44f1-8451-ffc8d5411fcd", contenttype:"DiagramModelArchimateConnection"});
+
+																						dataViewsContent.push({viewid:"8645d76c-ab2e-4b3a-9028-a1c2cc51679c", contentid:"355fca6a-f58a-4f49-b846-999d9f2a8958", contenttype:"DiagramModelArchimateConnection"});
+
+																						dataViewsContent.push({viewid:"8645d76c-ab2e-4b3a-9028-a1c2cc51679c", contentid:"5f4c2404-bba0-40ff-a4af-0f59d39afb46", contenttype:"DiagramModelArchimateConnection"});
+
+																						dataViewsContent.push({viewid:"8645d76c-ab2e-4b3a-9028-a1c2cc51679c", contentid:"33babeb7-fd48-43b3-8610-fc15c2ca9da2", contenttype:"DiagramModelArchimateConnection"});
+
+																						dataViewsContent.push({viewid:"8645d76c-ab2e-4b3a-9028-a1c2cc51679c", contentid:"7a047c9d-4b6e-4bbe-a4d7-ae86217b95c1", contenttype:"DiagramModelArchimateConnection"});
+
+																						dataViewsContent.push({viewid:"8645d76c-ab2e-4b3a-9028-a1c2cc51679c", contentid:"d7dc549a-173f-40bc-9a0c-71a206303615", contenttype:"DiagramModelArchimateConnection"});
+
+																						dataViewsContent.push({viewid:"8645d76c-ab2e-4b3a-9028-a1c2cc51679c", contentid:"d0360562-140e-4602-8488-8c438ddfe547", contenttype:"DiagramModelArchimateConnection"});
+
+																						dataViewsContent.push({viewid:"8645d76c-ab2e-4b3a-9028-a1c2cc51679c", contentid:"e630ccd9-3428-4d45-be7d-72dc397e0b0d", contenttype:"DiagramModelArchimateConnection"});
+
+																						dataViewsContent.push({viewid:"8645d76c-ab2e-4b3a-9028-a1c2cc51679c", contentid:"668171fc-dfe6-4dfb-a005-bea1e4a47481", contenttype:"DiagramModelArchimateConnection"});
+
+																						dataViewsContent.push({viewid:"8645d76c-ab2e-4b3a-9028-a1c2cc51679c", contentid:"f9cad325-7a69-4bc8-8dc4-faf4ef75de1d", contenttype:"DiagramModelArchimateConnection"});
+
+																						dataViewsContent.push({viewid:"8645d76c-ab2e-4b3a-9028-a1c2cc51679c", contentid:"fd1fe87e-b910-49f2-ac07-875949d7394b", contenttype:"DiagramModelArchimateConnection"});
+
+																						dataViewsContent.push({viewid:"8645d76c-ab2e-4b3a-9028-a1c2cc51679c", contentid:"c835a0d4-bcf9-4787-b8fd-465eb85233b5", contenttype:"DiagramModelArchimateConnection"});
+
+																						dataViewsContent.push({viewid:"8645d76c-ab2e-4b3a-9028-a1c2cc51679c", contentid:"2552a9a8-b6e7-4a9b-99c1-707c4690fa89", contenttype:"DiagramModelArchimateConnection"});
+
+
+
+
+												dataFoldersContent.push({folderid:"8225da6c-2ad9-4a13-a8d0-d7c117052cbc", contentid:"a21a7f27-af51-43ca-918a-5979eba33057", contenttype:"ArchimateDiagramModel"});
+													dataViews.push({id:"a21a7f27-af51-43ca-918a-5979eba33057", type:"ArchimateDiagramModel", name:decodeURL("Responsabilidades+da+equipe+administrativa"), documentation:decodeURL("")});
+															dataViewsContent.push({viewid:"a21a7f27-af51-43ca-918a-5979eba33057", contentid:"3aa3db7a-be64-40b3-9bad-4f4e28fdc9ae", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"a21a7f27-af51-43ca-918a-5979eba33057", contentid:"7ffac991-8919-4abe-a028-d4ca0101962c", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"a21a7f27-af51-43ca-918a-5979eba33057", contentid:"1c7da8e4-f1d9-420b-9c8f-bf7acf2637bb", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"a21a7f27-af51-43ca-918a-5979eba33057", contentid:"74c2e945-27af-4fd2-a61e-aedfd6398727", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"a21a7f27-af51-43ca-918a-5979eba33057", contentid:"41b2eac9-11d2-4b47-baaa-6fcef957ab65", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"a21a7f27-af51-43ca-918a-5979eba33057", contentid:"5ab7fb0d-76f2-481a-b02d-cf2f0a8977a0", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"a21a7f27-af51-43ca-918a-5979eba33057", contentid:"6bf0fa90-a541-4cff-93c9-f03f1e8184e2", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"a21a7f27-af51-43ca-918a-5979eba33057", contentid:"869996fc-06cb-4b8c-bd48-0be358df83de", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"a21a7f27-af51-43ca-918a-5979eba33057", contentid:"61352cd7-ba98-481c-a585-9026f9863d33", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"a21a7f27-af51-43ca-918a-5979eba33057", contentid:"048b6f2b-14fe-423f-b3f6-a01a08f86fdf", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"a21a7f27-af51-43ca-918a-5979eba33057", contentid:"32995fc4-dff6-4ac7-b9a1-4fe510321cb4", contenttype:"DiagramModelArchimateObject"});
+
+																					dataViewsContent.push({viewid:"a21a7f27-af51-43ca-918a-5979eba33057", contentid:"39dc666a-2010-468f-9b4f-7b0ef2be8edf", contenttype:"DiagramModelArchimateConnection"});
+
+																					dataViewsContent.push({viewid:"a21a7f27-af51-43ca-918a-5979eba33057", contentid:"25b55bb9-60b2-46b6-ad1f-042ce93f61e9", contenttype:"DiagramModelArchimateConnection"});
+
+																					dataViewsContent.push({viewid:"a21a7f27-af51-43ca-918a-5979eba33057", contentid:"c8de27bc-ff5c-46d5-be63-83017e806aa1", contenttype:"DiagramModelArchimateConnection"});
+
+																					dataViewsContent.push({viewid:"a21a7f27-af51-43ca-918a-5979eba33057", contentid:"cd4c3b01-295d-4002-9b84-9f92e28f079a", contenttype:"DiagramModelArchimateConnection"});
+
+																					dataViewsContent.push({viewid:"a21a7f27-af51-43ca-918a-5979eba33057", contentid:"ef828ec6-9af3-4431-9c1d-8c17837d251d", contenttype:"DiagramModelArchimateConnection"});
+
+																					dataViewsContent.push({viewid:"a21a7f27-af51-43ca-918a-5979eba33057", contentid:"124a39b2-8f3e-4e6c-a021-15be142daf6c", contenttype:"DiagramModelArchimateConnection"});
+
+																					dataViewsContent.push({viewid:"a21a7f27-af51-43ca-918a-5979eba33057", contentid:"8ae838b0-bfac-4511-896e-877021abda05", contenttype:"DiagramModelArchimateConnection"});
+
+																					dataViewsContent.push({viewid:"a21a7f27-af51-43ca-918a-5979eba33057", contentid:"686f7f65-d65b-4fb3-b66c-a3d37bd3cf89", contenttype:"DiagramModelArchimateConnection"});
+
+																					dataViewsContent.push({viewid:"a21a7f27-af51-43ca-918a-5979eba33057", contentid:"6922b33d-e409-441a-967b-42b2e1e47c1d", contenttype:"DiagramModelArchimateConnection"});
+
+																					dataViewsContent.push({viewid:"a21a7f27-af51-43ca-918a-5979eba33057", contentid:"7f048fda-8a2e-477c-8b3b-cbe640152172", contenttype:"DiagramModelArchimateConnection"});
+
+
+
+
+
+
+										dataFoldersContent.push({folderid:"8e26704b-65b0-492e-850c-61cc25da89e9", contentid:"d642a205-6b19-4f00-a331-c7f789db3271", contenttype:"ArchimateDiagramModel"});
+											dataViews.push({id:"d642a205-6b19-4f00-a331-c7f789db3271", type:"ArchimateDiagramModel", name:decodeURL("Organiza%C3%A7%C3%A3o+geral"), documentation:decodeURL("Diagrama+que+mostra+a+organiza%C3%A7%C3%A3o+geral+da+Equipe+de+Rob%C3%B3tica+da+UFES.")});
+													dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"c0873782-03a2-4e45-ac7b-cf3fcf89c45a", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"19f8eca3-2519-41dd-9094-9d7850fe9d66", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"0ccedd12-e72b-4e4e-afa2-a20e3da54070", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"797da140-36ea-4369-9d2e-2c36fc965a33", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"9aa64fbc-9154-4eb5-a679-94c5ed9673cb", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"b08caa29-eabe-4d78-a72a-d85fbab3cc1c", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"ad6d1b06-3077-487e-887a-20f8e9bbf1b0", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"6efe0e91-f903-4a32-a28d-b51d7ecae42b", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"4ca7ca84-7b76-4344-a5f2-48123a908bcc", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"8d4d45ad-eef8-4079-b412-9474ab8a48dd", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"fedf4382-4493-41df-9fe0-50d9376e5ea0", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"be969b37-7411-4870-90d9-76d9cd7f2381", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"d1dcf621-9800-4d07-bc2b-3d0b6b4316de", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"012c167c-f0cb-4ab7-9b5a-f6b42ff7b893", contenttype:"DiagramModelArchimateObject"});
+															dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"e1d590c8-98c9-4401-8180-f4bcfb4ad91f", contenttype:"DiagramModelArchimateObject"});
+													
+													dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"002019ee-3686-409a-9e43-713555b580cb", contenttype:"DiagramModelArchimateObject"});
+													dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"23e7a280-3b76-496f-8600-c110b1b3d4c3", contenttype:"DiagramModelArchimateObject"});
+													dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"d2a088f2-1c25-49f5-833f-913c6dac5d2b", contenttype:"DiagramModelArchimateObject"});
+													dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"a6628b0b-1fa6-4378-9b7b-eebaada5a199", contenttype:"DiagramModelArchimateObject"});
+													dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"c7708676-b057-439a-8ea0-3f7ea268bb5f", contenttype:"DiagramModelArchimateObject"});
+
+																			dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"f22d7dc3-ed13-4724-89f5-bcba67ad7cf5", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"526322cf-3b45-414a-8ffa-17ecb9e46ade", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"cbdfb59b-534f-44ac-b86a-957ec786db20", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"6015c1b9-eeed-42b2-b395-a4f68c72a150", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"efe88d3d-5b4a-4979-b8e6-9a6395511412", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"0b78ea95-3a42-4c31-b9dd-44d59c2b3a1a", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"745b785b-dda8-4964-8f66-c3c5b0c17c2a", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"916805b7-cc75-4c79-84f3-1acb1a3926f9", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"f8180e6f-622d-431f-83e8-c8fc4d9700bb", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"9d01c26b-a51a-4f33-ac86-6c817e0dfba3", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"ab250f2d-ada4-4df2-9c63-506b4893fe7f", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"74a0b829-cfeb-4799-9320-e2d23a7e2045", contenttype:"DiagramModelArchimateConnection"});
+																			dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"ce857595-7f8f-4f55-a772-67e89027e6cc", contenttype:"DiagramModelArchimateConnection"});
+
+																					dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"93f6265d-1adf-455e-9033-d9d1d2993c84", contenttype:"DiagramModelArchimateConnection"});
+																					dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"12bb2228-a9a5-402f-8c25-9c6060a590ce", contenttype:"DiagramModelArchimateConnection"});
+																					dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"28836119-e4db-401f-8110-44f93519535e", contenttype:"DiagramModelArchimateConnection"});
+
+																					dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"c37174cc-2514-44b2-b77c-f11e80144065", contenttype:"DiagramModelArchimateConnection"});
+
+																					dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"951a8e9c-d696-4f47-be35-6926d111c30f", contenttype:"DiagramModelArchimateConnection"});
+																					dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"7a89be5d-b22b-4c0b-bb27-f625ce29c4a4", contenttype:"DiagramModelArchimateConnection"});
+
+																					dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"616874e1-c733-465f-a4e6-3e83316542c4", contenttype:"DiagramModelArchimateConnection"});
+
+																					dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"fcd039ad-43b9-43af-a09d-1605df013d2c", contenttype:"DiagramModelArchimateConnection"});
+
+																					dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"3592c5b2-0b38-49b1-a7d7-d84e493c5fca", contenttype:"DiagramModelArchimateConnection"});
+
+																					dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"b755f9b7-26e9-42bb-8097-8ae680496508", contenttype:"DiagramModelArchimateConnection"});
+
+																					dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"58327415-640a-431d-99a4-a18a0728dd4e", contenttype:"DiagramModelArchimateConnection"});
+
+																					dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"15d115c6-bd03-4137-a5ba-6111843e7377", contenttype:"DiagramModelArchimateConnection"});
+
+																					dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"a488eb09-c37f-4fb6-bb84-e1be36f115c4", contenttype:"DiagramModelArchimateConnection"});
+
+																					dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"c29db0f3-6c07-4def-9c97-0a9e381e93c2", contenttype:"DiagramModelArchimateConnection"});
+
+																					dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"4cbc9fa0-6586-4cbb-99d6-61c67c71e614", contenttype:"DiagramModelArchimateConnection"});
+
+																					dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"cfabcfd0-6b97-4442-ab3d-7634883ae10d", contenttype:"DiagramModelArchimateConnection"});
+
+																					dataViewsContent.push({viewid:"d642a205-6b19-4f00-a331-c7f789db3271", contentid:"db63df65-766b-4dd2-b566-812d82b5372c", contenttype:"DiagramModelArchimateConnection"});
+
+													
+
+
+
+
+
+
+
+						    alasql('CREATE TABLE Elements');
+						    alasql('CREATE TABLE Properties');
+						    alasql('CREATE TABLE Relationships');
+						    alasql('CREATE TABLE Views');
+						    alasql('CREATE TABLE ViewsContent');
+						    alasql('CREATE TABLE Folders');
+						    alasql('CREATE TABLE FoldersContent');
+
+						    alasql.tables.Elements.data = dataElements;
+						    alasql.tables.Properties.data = dataProperties;
+						    alasql.tables.Relationships.data = dataRelationships;
+						    alasql.tables.Views.data = dataViews;
+						    alasql.tables.ViewsContent.data = dataViewsContent;
+						    alasql.tables.Folders.data = dataFolders;
+						    alasql.tables.FoldersContent.data = dataFoldersContent;
+						</script> 
+						</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">imageMapResize();</script>
+</body>
+</html>
